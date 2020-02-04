@@ -29,19 +29,61 @@ seq <- c(rep(1, length= length(AEID)), rep(0, length= length(EAID)))
 Effort <- cbind(Effort, seq)
 colnames(Effort) <- cnames
 row.names(Effort) <- rnames
-
+#Some analysis
+plot(density(Effort[,11:20], na.rm = TRUE), main = "Time spent on each trial")
+hist(Effort[,11:20], xlim=c(0,50), breaks=50, main = "Time spent on each trial")
+median(Effort[,11:20], na.rm = TRUE)
+library(d3heatmap)
+x <- Effort[,1:10]
+d3heatmap(x, Colv = NA,Rowv = NA, col = c("blue", "red"), scale="none", cexRow = 1,cexCol = 1)
+mean(rowSums(x), na.rm=TRUE)
+table(rowSums(x))
+cor1 <- (cor(Effort[,1], Effort[,11], use = "complete.obs", method="spearman"))
+cor2 <- (cor(Effort[,2], Effort[,12], use = "complete.obs", method="spearman"))
+cor3 <- (cor(Effort[,3], Effort[,13], use = "complete.obs", method="spearman"))
+cor4 <- (cor(Effort[,4], Effort[,14], use = "complete.obs", method="spearman"))
+cor5 <- (cor(Effort[,5], Effort[,15], use = "complete.obs", method="spearman"))
+cor6 <- (cor(Effort[,6], Effort[,16], use = "complete.obs", method="spearman"))
+cor7 <- (cor(Effort[,7], Effort[,17], use = "complete.obs", method="spearman"))
+cor8 <- (cor(Effort[,8], Effort[,18], use = "complete.obs", method="spearman"))
+cor9 <- (cor(Effort[,9], Effort[,19], use = "complete.obs", method="spearman"))
+cor10 <- (cor(Effort[,10], Effort[,20], use = "complete.obs", method="spearman"))
+mean(rbind(cor1,cor2,cor3,cor4,cor5,cor6,cor7,cor8,cor9,cor10))
 
 # DtD 3th bead
   # Files at "/Users/klevjer/R Projects/Probabilistic Reasoning/Raw data/beads DtD task"
   # Todo / Notes:
-    # Optimal / Baysian probabilities needed, seq_1, 6040 set.
+    # Include participant numbers
     # Participants draws a lot of beads, then stops, draws more, etc. Need a way to examine this.
     # Simply using numbers drawn, and response times is not enough, what if someone makes a terrible mistake, like after 15 beads still goes for the clearly less likely.
 path <- "/Users/klevjer/R Projects/Probabilistic Reasoning/Raw data/beads DtD task/" #Set to local path / directory of raw files for Ambiguity+Effort)
+pattern <- "trials_2.csv"
+DtDFiles <- list.files(path = path, pattern = pattern)
+DtDFiles <- paste(path, DtDFiles, sep = "")
+DtDN2 <- do.call(rbind, lapply(DtDFiles, function(x) sum(as.numeric(as.character(read.csv(x)[1:20,2]))))) #Some (at leaste one) values are one to high
 pattern <- "trials_3.csv"
 DtDFiles <- list.files(path = path, pattern = pattern)
 DtDFiles <- paste(path, DtDFiles, sep = "")
-DtDN <- do.call(rbind, lapply(DtDFiles, function(x) sum(as.numeric(as.character(read.csv(x)[1:20,2]))))) #Some (at leaste one) values are one to high
+DtDN3 <- do.call(rbind, lapply(DtDFiles, function(x) sum(as.numeric(as.character(read.csv(x)[1:20,2]))))) #Some (at leaste one) values are one to high
+pattern <- "trials_4.csv"
+DtDFiles <- list.files(path = path, pattern = pattern)
+DtDFiles <- paste(path, DtDFiles, sep = "")
+DtDN4 <- do.call(rbind, lapply(DtDFiles, function(x) sum(as.numeric(as.character(read.csv(x)[1:20,2]))))) #Some (at leaste one) values are one to high
+pattern <- "trials.csv"
+DtDFiles <- list.files(path = path, pattern = pattern)
+DtDFiles <- paste(path, DtDFiles, sep = "")
+DtDN1 <- do.call(rbind, lapply(DtDFiles, function(x) sum(as.numeric(as.character(read.csv(x)[1:20,2]))))) #Some (at leaste one) values are one to high
+pattern <- "trials_5.csv"
+DtDFiles <- list.files(path = path, pattern = pattern)
+DtDFiles <- paste(path, DtDFiles, sep = "")
+DtDN5 <- do.call(rbind, lapply(DtDFiles, function(x) sum(as.numeric(as.character(read.csv(x)[1:20,2]))))) #Some (at leaste one) values are one to high
+#DtDN <- cbind(DtDN1, DtDN2, DtDN3, DtDN4, DtDN5) #doesn't work before participant ID's are recorded for each
+#Some exploring
+hist(DtDN1, main = "85/15", ylim = c(0,40), xlim = c(0,20), breaks = 20, col = "darkred")
+hist(DtDN2, main = "85/15", ylim = c(0,40), xlim = c(0,20), breaks = 20, col = "darkred")
+hist(DtDN3, main = "40/60", ylim = c(0,40), xlim = c(0,20), breaks = 20, col = "darkred")
+hist(DtDN4, main = "40/60", ylim = c(0,40), xlim = c(0,20), breaks = 20, col = "darkred")
+hist(DtDN5, main = "85/15", ylim = c(0,40), xlim = c(0,20), breaks = 20, col = "darkred")
 
 # Ambiguity
   # Files at: "/Users/klevjer/R Projects/Probabilistic Reasoning/Raw data/Ambiguity+Effort"
@@ -53,228 +95,3 @@ DtDN <- do.call(rbind, lapply(DtDFiles, function(x) sum(as.numeric(as.character(
      # Would be helpful to calculate the optimal, so one could classify diviation from the optimal for both risk and ambiguity, and then compare.
         # Also to see if RT increases (drastically) when they don't differ a lot, otherwise this could be a way to quantify a participants treshold.
 
-#Real values for DtD
-# Draw: B, B, Y, Y B Y Y B B B B B Y B Y B B B Y B - Blue coded as 1, Y as 0
-#1
-Points <- 0.5
-p_grid1 <- seq(from = 0, to = 1, length = 1000) #grid of 1000
-prob_p1 <- rep(1, 1000) #flat prior
-prob_data1 <- dbinom(1, size = 1, prob = p_grid1)
-posterior1 <- prob_data1 * prob_p1 # taking the prior into account, not needed in this example
-posteriornorm1 <- posterior1 / sum(posterior1) #normalizing
-prob_p1 <- posteriornorm1
-set.seed(100)
-samples1 <- sample(p_grid1, prob = posteriornorm1, size = 1000, replace = TRUE)
-mean(samples1) #point estimate of the true proportion of water
-quantile(samples1, probs = c(0.05, 0.95)) #95% CI
-Temp <- cbind(mean(samples1), quantile(samples1, probs = c(0.05, 0.95)))
-Points <- rbind(Points, Temp)
-#2
-prob_data1 <- dbinom(2, size = 2, prob = p_grid1)
-posterior1 <- prob_data1 * prob_p1 # taking the prior into account, not needed in this example
-posteriornorm1 <- posterior1 / sum(posterior1) #normalizing
-prob_p1 <- posteriornorm1
-set.seed(100)
-samples1 <- sample(p_grid1, prob = posteriornorm1, size = 1000, replace = TRUE)
-mean(samples1) #point estimate of the true proportion of water
-quantile(samples1, probs = c(0.05, 0.95)) #95% CI
-Temp <- cbind(mean(samples1), quantile(samples1, probs = c(0.05, 0.95)))
-Points <- rbind(Points, Temp)
-#3
-prob_data1 <- dbinom(2, size = 3, prob = p_grid1)
-posterior1 <- prob_data1 * prob_p1 # taking the prior into account, not needed in this example
-posteriornorm1 <- posterior1 / sum(posterior1) #normalizing
-prob_p1 <- posteriornorm1
-set.seed(100)
-samples1 <- sample(p_grid1, prob = posteriornorm1, size = 1000, replace = TRUE)
-mean(samples1) #point estimate of the true proportion of water
-quantile(samples1, probs = c(0.05, 0.95)) #95% CI
-Temp <- cbind(mean(samples1), quantile(samples1, probs = c(0.05, 0.95)))
-Points <- rbind(Points, Temp)
-#4
-prob_data1 <- dbinom(2, size = 4, prob = p_grid1)
-posterior1 <- prob_data1 * prob_p1 # taking the prior into account, not needed in this example
-posteriornorm1 <- posterior1 / sum(posterior1) #normalizing
-prob_p1 <- posteriornorm1
-set.seed(100)
-samples1 <- sample(p_grid1, prob = posteriornorm1, size = 1000, replace = TRUE)
-mean(samples1) #point estimate of the true proportion of water
-quantile(samples1, probs = c(0.05, 0.95)) #95% CI
-Temp <- cbind(mean(samples1), quantile(samples1, probs = c(0.05, 0.95)))
-Points <- rbind(Points, Temp)
-#5
-prob_data1 <- dbinom(3, size = 5, prob = p_grid1)
-posterior1 <- prob_data1 * prob_p1 # taking the prior into account, not needed in this example
-posteriornorm1 <- posterior1 / sum(posterior1) #normalizing
-prob_p1 <- posteriornorm1
-set.seed(100)
-samples1 <- sample(p_grid1, prob = posteriornorm1, size = 1000, replace = TRUE)
-mean(samples1) #point estimate of the true proportion of water
-quantile(samples1, probs = c(0.05, 0.95)) #95% CI
-Temp <- cbind(mean(samples1), quantile(samples1, probs = c(0.05, 0.95)))
-Points <- rbind(Points, Temp)
-#6
-prob_data1 <- dbinom(3, size = 6, prob = p_grid1)
-posterior1 <- prob_data1 * prob_p1 # taking the prior into account, not needed in this example
-posteriornorm1 <- posterior1 / sum(posterior1) #normalizing
-prob_p1 <- posteriornorm1
-set.seed(100)
-samples1 <- sample(p_grid1, prob = posteriornorm1, size = 1000, replace = TRUE)
-mean(samples1) #point estimate of the true proportion of water
-quantile(samples1, probs = c(0.05, 0.95)) #95% CI
-Temp <- cbind(mean(samples1), quantile(samples1, probs = c(0.05, 0.95)))
-Points <- rbind(Points, Temp)
-#7
-prob_data1 <- dbinom(3, size = 7, prob = p_grid1)
-posterior1 <- prob_data1 * prob_p1 # taking the prior into account, not needed in this example
-posteriornorm1 <- posterior1 / sum(posterior1) #normalizing
-prob_p1 <- posteriornorm1
-set.seed(100)
-samples1 <- sample(p_grid1, prob = posteriornorm1, size = 1000, replace = TRUE)
-mean(samples1) #point estimate of the true proportion of water
-quantile(samples1, probs = c(0.05, 0.95)) #95% CI
-Temp <- cbind(mean(samples1), quantile(samples1, probs = c(0.05, 0.95)))
-Points <- rbind(Points, Temp)
-#8
-prob_data1 <- dbinom(4, size = 8, prob = p_grid1)
-posterior1 <- prob_data1 * prob_p1 # taking the prior into account, not needed in this example
-posteriornorm1 <- posterior1 / sum(posterior1) #normalizing
-prob_p1 <- posteriornorm1
-set.seed(100)
-samples1 <- sample(p_grid1, prob = posteriornorm1, size = 1000, replace = TRUE)
-mean(samples1) #point estimate of the true proportion of water
-quantile(samples1, probs = c(0.05, 0.95)) #95% CI
-Temp <- cbind(mean(samples1), quantile(samples1, probs = c(0.05, 0.95)))
-Points <- rbind(Points, Temp)
-#9
-prob_data1 <- dbinom(5, size = 9, prob = p_grid1)
-posterior1 <- prob_data1 * prob_p1 # taking the prior into account, not needed in this example
-posteriornorm1 <- posterior1 / sum(posterior1) #normalizing
-prob_p1 <- posteriornorm1
-set.seed(100)
-samples1 <- sample(p_grid1, prob = posteriornorm1, size = 1000, replace = TRUE)
-mean(samples1) #point estimate of the true proportion of water
-quantile(samples1, probs = c(0.05, 0.95)) #95% CI
-Temp <- cbind(mean(samples1), quantile(samples1, probs = c(0.05, 0.95)))
-Points <- rbind(Points, Temp)
-#10
-prob_data1 <- dbinom(6, size = 10, prob = p_grid1)
-posterior1 <- prob_data1 * prob_p1 # taking the prior into account, not needed in this example
-posteriornorm1 <- posterior1 / sum(posterior1) #normalizing
-prob_p1 <- posteriornorm1
-set.seed(100)
-samples1 <- sample(p_grid1, prob = posteriornorm1, size = 1000, replace = TRUE)
-mean(samples1) #point estimate of the true proportion of water
-quantile(samples1, probs = c(0.05, 0.95)) #95% CI
-Temp <- cbind(mean(samples1), quantile(samples1, probs = c(0.05, 0.95)))
-Points <- rbind(Points, Temp)
-#11
-prob_data1 <- dbinom(7, size = 11, prob = p_grid1)
-posterior1 <- prob_data1 * prob_p1 # taking the prior into account, not needed in this example
-posteriornorm1 <- posterior1 / sum(posterior1) #normalizing
-prob_p1 <- posteriornorm1
-set.seed(100)
-samples1 <- sample(p_grid1, prob = posteriornorm1, size = 1000, replace = TRUE)
-mean(samples1) #point estimate of the true proportion of water
-quantile(samples1, probs = c(0.05, 0.95)) #95% CI
-Temp <- cbind(mean(samples1), quantile(samples1, probs = c(0.05, 0.95)))
-Points <- rbind(Points, Temp)
-#12
-prob_data1 <- dbinom(8, size = 12, prob = p_grid1)
-posterior1 <- prob_data1 * prob_p1 # taking the prior into account, not needed in this example
-posteriornorm1 <- posterior1 / sum(posterior1) #normalizing
-prob_p1 <- posteriornorm1
-set.seed(100)
-samples1 <- sample(p_grid1, prob = posteriornorm1, size = 1000, replace = TRUE)
-mean(samples1) #point estimate of the true proportion of water
-quantile(samples1, probs = c(0.05, 0.95)) #95% CI
-Temp <- cbind(mean(samples1), quantile(samples1, probs = c(0.05, 0.95)))
-Points <- rbind(Points, Temp)
-#13
-prob_data1 <- dbinom(8, size = 13, prob = p_grid1)
-posterior1 <- prob_data1 * prob_p1 # taking the prior into account, not needed in this example
-posteriornorm1 <- posterior1 / sum(posterior1) #normalizing
-prob_p1 <- posteriornorm1
-set.seed(100)
-samples1 <- sample(p_grid1, prob = posteriornorm1, size = 1000, replace = TRUE)
-mean(samples1) #point estimate of the true proportion of water
-quantile(samples1, probs = c(0.05, 0.95)) #95% CI
-Temp <- cbind(mean(samples1), quantile(samples1, probs = c(0.05, 0.95)))
-Points <- rbind(Points, Temp)
-#14
-prob_data1 <- dbinom(9, size = 14, prob = p_grid1)
-posterior1 <- prob_data1 * prob_p1 # taking the prior into account, not needed in this example
-posteriornorm1 <- posterior1 / sum(posterior1) #normalizing
-prob_p1 <- posteriornorm1
-set.seed(100)
-samples1 <- sample(p_grid1, prob = posteriornorm1, size = 1000, replace = TRUE)
-mean(samples1) #point estimate of the true proportion of water
-quantile(samples1, probs = c(0.05, 0.95)) #95% CI
-Temp <- cbind(mean(samples1), quantile(samples1, probs = c(0.05, 0.95)))
-Points <- rbind(Points, Temp)
-#15
-prob_data1 <- dbinom(9, size = 15, prob = p_grid1)
-posterior1 <- prob_data1 * prob_p1 # taking the prior into account, not needed in this example
-posteriornorm1 <- posterior1 / sum(posterior1) #normalizing
-prob_p1 <- posteriornorm1
-set.seed(100)
-samples1 <- sample(p_grid1, prob = posteriornorm1, size = 1000, replace = TRUE)
-mean(samples1) #point estimate of the true proportion of water
-quantile(samples1, probs = c(0.05, 0.95)) #95% CI
-Temp <- cbind(mean(samples1), quantile(samples1, probs = c(0.05, 0.95)))
-Points <- rbind(Points, Temp)
-#16
-prob_data1 <- dbinom(10, size = 16, prob = p_grid1)
-posterior1 <- prob_data1 * prob_p1 # taking the prior into account, not needed in this example
-posteriornorm1 <- posterior1 / sum(posterior1) #normalizing
-prob_p1 <- posteriornorm1
-set.seed(100)
-samples1 <- sample(p_grid1, prob = posteriornorm1, size = 1000, replace = TRUE)
-mean(samples1) #point estimate of the true proportion of water
-quantile(samples1, probs = c(0.05, 0.95)) #95% CI
-Temp <- cbind(mean(samples1), quantile(samples1, probs = c(0.05, 0.95)))
-Points <- rbind(Points, Temp)
-#17
-prob_data1 <- dbinom(11, size = 17, prob = p_grid1)
-posterior1 <- prob_data1 * prob_p1 # taking the prior into account, not needed in this example
-posteriornorm1 <- posterior1 / sum(posterior1) #normalizing
-prob_p1 <- posteriornorm1
-set.seed(100)
-samples1 <- sample(p_grid1, prob = posteriornorm1, size = 1000, replace = TRUE)
-mean(samples1) #point estimate of the true proportion of water
-quantile(samples1, probs = c(0.05, 0.95)) #95% CI
-Temp <- cbind(mean(samples1), quantile(samples1, probs = c(0.05, 0.95)))
-Points <- rbind(Points, Temp)
-#18
-prob_data1 <- dbinom(12, size = 18, prob = p_grid1)
-posterior1 <- prob_data1 * prob_p1 # taking the prior into account, not needed in this example
-posteriornorm1 <- posterior1 / sum(posterior1) #normalizing
-prob_p1 <- posteriornorm1
-set.seed(100)
-samples1 <- sample(p_grid1, prob = posteriornorm1, size = 1000, replace = TRUE)
-mean(samples1) #point estimate of the true proportion of water
-quantile(samples1, probs = c(0.05, 0.95)) #95% CI
-Temp <- cbind(mean(samples1), quantile(samples1, probs = c(0.05, 0.95)))
-Points <- rbind(Points, Temp)
-#19
-prob_data1 <- dbinom(12, size = 19, prob = p_grid1)
-posterior1 <- prob_data1 * prob_p1 # taking the prior into account, not needed in this example
-posteriornorm1 <- posterior1 / sum(posterior1) #normalizing
-prob_p1 <- posteriornorm1
-set.seed(100)
-samples1 <- sample(p_grid1, prob = posteriornorm1, size = 1000, replace = TRUE)
-mean(samples1) #point estimate of the true proportion of water
-quantile(samples1, probs = c(0.05, 0.95)) #95% CI
-Temp <- cbind(mean(samples1), quantile(samples1, probs = c(0.05, 0.95)))
-Points <- rbind(Points, Temp)
-#20
-prob_data1 <- dbinom(13, size = 20, prob = p_grid1)
-posterior1 <- prob_data1 * prob_p1 # taking the prior into account, not needed in this example
-posteriornorm1 <- posterior1 / sum(posterior1) #normalizing
-prob_p1 <- posteriornorm1
-set.seed(100)
-samples1 <- sample(p_grid1, prob = posteriornorm1, size = 1000, replace = TRUE)
-mean(samples1) #point estimate of the true proportion of water
-quantile(samples1, probs = c(0.05, 0.95)) #95% CI
-Temp <- cbind(mean(samples1), quantile(samples1, probs = c(0.05, 0.95)))
-Points <- rbind(Points, Temp)
