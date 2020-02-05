@@ -1,0 +1,50 @@
+---
+title: "Beads - Box - Ambiguity - Counting/Effort"
+subtitle: "A (very) preliminary peek"
+author: "Kristoffer Klevjer"
+date: "2/5/2020"
+output: 
+    ioslides_presentation:
+      logo: logo.png
+---
+## Tiny bit of caution
+<div class="notes">
+The following single character keyboard shortcuts enable alternate display modes:
+
+- 'f': enable fullscreen mode
+- 'w': toggle widescreen mode
+- 'o': enable overview mode
+- 'h': enable code highlight mode
+- 'p': show presenter notes
+- 'esc': exits all modes.
+</div>
+
+*"Never start a presentation by excusing yourself"*
+- Everybody
+
+*However:*
+
+- "fdsfdsfds" is probably a test/pilot-participant
+- Speed > Robustness
+- Only a select few variables
+- Simple tests
+  - No attention to prereg
+  - No deep-dive
+- Only small amounts of theory referenced
+
+## Sample
+
+- n=78
+- Tested in groups last Thursday
+  - Counterbalanced
+- 2.nd. year psychology students (mainly)
+
+## Overview
+![](path/to/picture.png) ![](path/to/picture2.png)
+
+- Questionnaires: CAPE-N, NfCS, 5DCuriosity
+- In principle same ID for the rest of the four days.
+  - Music study
+  - Sunk-cost and risk preference
+  - Etc.
+
