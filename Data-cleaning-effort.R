@@ -1,4 +1,5 @@
 #Data-cleaning Effort-task
+##Manually removed the fdsfds-participant file, as this created a lot of trouble
 path <- "/Users/klevjer/R Projects/Probabilistic Reasoning/Raw data/Ambiguity+Effort/" #Set to local path / directory of raw files for Ambiguity+Effort
 EAmbiguity <- "EAmbiguity"
 AmbiguityE <- "AmbiguityE"
@@ -14,10 +15,12 @@ EAEffort <- do.call(rbind, (lapply(EAFiles, function(x) read.csv(x)[2:11,31])))
 AEEffort <- do.call(rbind, (lapply(AEFiles, function(x) read.csv(x)[126:135,"key_resp_6.corr"])))
 EAEffortRT <- do.call(rbind, (lapply(EAFiles, function(x) read.csv(x)[2:11,32])))
 AEEffortRT <- do.call(rbind, (lapply(AEFiles, function(x) read.csv(x)[126:135,"key_resp_6.rt"])))
-AEEffort <- cbind(AEEffort, AEEffortRT)
-EAEffort <- cbind(EAEffort, EAEffortRT)
+AEEffortRat <- do.call(rbind, (lapply(AEFiles, function(x) read.csv(x)[126:135,"rating_2.response"])))
+EAEffortRat <- do.call(rbind, (lapply(EAFiles, function(x) read.csv(x)[2:11,37])))
+AEEffort <- cbind(AEEffort, AEEffortRT, AEEffortRat)
+EAEffort <- cbind(EAEffort, EAEffortRT, EAEffortRat)
 Effort <- rbind(AEEffort, EAEffort)
-cnames <- c("Trial 1", "Trial 2", "Trial 3", "Trial 4", "Trial 5", "Trial 6", "Trial 7", "Trial 8", "Trial 9", "Trial 10", "Trial 1 RT", "Trial 2 RT", "Trial 3 RT", "Trial 4 RT", "Trial 5 RT", "Trial 6 RT", "Trial 7 RT", "Trial 8 RT", "Trial 9 RT", "Trial 10 RT", "Seq") #for seq: 1=AE, 0=EA
+cnames <- c("Trial 1", "Trial 2", "Trial 3", "Trial 4", "Trial 5", "Trial 6", "Trial 7", "Trial 8", "Trial 9", "Trial 10", "Trial 1 RT", "Trial 2 RT", "Trial 3 RT", "Trial 4 RT", "Trial 5 RT", "Trial 6 RT", "Trial 7 RT", "Trial 8 RT", "Trial 9 RT", "Trial 10 RT","Trial 1 Rating","Trial 2 Rating","Trial 3 Rating","Trial 4 Rating","Trial 5 Rating","Trial 6 Rating","Trial 7 Rating","Trial 8 Rating","Trial 9 Rating","Trial 10 Rating", "Seq") #for seq: 1=AE, 0=EA
 AEID <- AEID[-c(29,31)] #highly un-elegant solution. lappy above returns a list, with NULL values, however these are removed when stiched, and can´t seem to prevent this, so read manually.
 EAID <- EAID[-1]
 rnames <- c(AEID, EAID)
