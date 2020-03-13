@@ -1,10 +1,8 @@
 #Data-cleaning Beads-task
-# DtD 3th bead
 # Files at "/Users/klevjer/R Projects/Probabilistic Reasoning/Raw data/beads DtD task"
 # Todo / Notes:
-# Include participant numbers
-# Participants draws a lot of beads, then stops, draws more, etc. Need a way to examine this.
-# Simply using numbers drawn, and response times is not enough, what if someone makes a terrible mistake, like after 15 beads still goes for the clearly less likely.
+# Include participant numbers, as some (seemingly) didn't do all of them, so in the complete dataset they need to be matched by ID.
+# Some strangeness going on in the extraction, safest to extract ID's
 path <- "/Users/klevjer/R Projects/Probabilistic Reasoning/Raw data/beads DtD task/" #Set to local path / directory of raw files for Ambiguity+Effort)
 pattern <- "trials_2.csv"
 DtDFiles <- list.files(path = path, pattern = pattern)
