@@ -1,8 +1,5 @@
 #Data-cleaning Beads-task
 # Files at "/Users/klevjer/R Projects/Probabilistic Reasoning/Raw data/beads DtD task"
-# Todo / Notes:
-# Include participant numbers, as some (seemingly) didn't do all of them, so in the complete dataset they need to be matched by ID.
-# Some strangeness going on in the extraction, safest to extract ID's
 path <- "/Users/klevjer/R Projects/Probabilistic Reasoning/Raw data/beads DtD task/" #Set to local path / directory of raw files for Ambiguity+Effort)
 pattern <- "trials_2.csv"
 DtDFiles <- list.files(path = path, pattern = pattern)
@@ -24,4 +21,10 @@ pattern <- "trials_5.csv"
 DtDFiles <- list.files(path = path, pattern = pattern)
 DtDFiles <- paste(path, DtDFiles, sep = "")
 DtDN5 <- do.call(rbind, lapply(DtDFiles, function(x) sum(as.numeric(as.character(read.csv(x)[1:20,2]))))) #Some (at leaste one) values are one to high
-#DtDN <- cbind(DtDN1, DtDN2, DtDN3, DtDN4, DtDN5) #doesn't work before participant ID's are recorded for each
+DtDN <- cbind(DtDN1, DtDN2, DtDN3, DtDN4, DtDN5)
+
+IDTemp <- list.files(path = path, pattern = pattern)
+IDT <- sapply(strsplit(IDTemp, split='trials_5.csv', fixed=TRUE), function(x) (x[1]))
+ID <- sapply(strsplit(IDTemp, split='_beads_task', fixed=TRUE), function(x) (x[1]))
+row.names(DtDN) <- ID
+  
