@@ -20,7 +20,7 @@ EAEffortRat <- do.call(rbind, (lapply(EAFiles, function(x) read.csv(x)[2:11,37])
 AEEffort <- cbind(AEEffort, AEEffortRT, AEEffortRat)
 EAEffort <- cbind(EAEffort, EAEffortRT, EAEffortRat)
 Effort <- rbind(AEEffort, EAEffort)
-cnames <- c("Trial 1", "Trial 2", "Trial 3", "Trial 4", "Trial 5", "Trial 6", "Trial 7", "Trial 8", "Trial 9", "Trial 10", "Trial 1 RT", "Trial 2 RT", "Trial 3 RT", "Trial 4 RT", "Trial 5 RT", "Trial 6 RT", "Trial 7 RT", "Trial 8 RT", "Trial 9 RT", "Trial 10 RT","Trial 1 Rating","Trial 2 Rating","Trial 3 Rating","Trial 4 Rating","Trial 5 Rating","Trial 6 Rating","Trial 7 Rating","Trial 8 Rating","Trial 9 Rating","Trial 10 Rating", "Seq") #for seq: 1=AE, 0=EA
+cnames <- c("EffortChoice1", "EffortChoice2", "EffortChoice3", "EffortChoice4", "EffortChoice5", "EffortChoice6", "EffortChoice7", "EffortChoice8", "EffortChoice9", "EffortChoice10", "EffortRT1", "EffortRT2", "EffortRT3", "EffortRT4", "EffortRT5", "EffortRT6", "EffortRT7", "EffortRT8", "EffortRT9", "EffortRT10","EffortRate1","EffortRate2","EffortRate3","EffortRate4","EffortRate5","EffortRate6","EffortRate7","EffortRate8","EffortRate9","EffortRate10", "EffortSeq") #for seq: 1=AE, 0=EA
 AEID <- AEID[-c(29,31)] #highly un-elegant solution. lappy above returns a list, with NULL values, however these are removed when stiched, and can´t seem to prevent this, so read manually.
 EAID <- EAID[-1]
 rnames <- c(AEID, EAID)
@@ -28,4 +28,4 @@ seq <- c(rep(1, length= length(AEID)), rep(0, length= length(EAID)))
 Effort <- cbind(Effort, seq)
 colnames(Effort) <- cnames
 row.names(Effort) <- rnames
-write.csv(Effort, file="effort.csv")
+write.csv(Effort, file="Cleaned data/EffortTask.csv")
