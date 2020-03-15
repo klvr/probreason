@@ -132,7 +132,7 @@ BoxTaskAll <- BoxTaskAll[-c(1,7,13,19,25,31,37,43,49,55,61)]
 row.names(BoxTaskAll) <- BoxTaskIDs
 
 #Rearrange the results, and add headers
-Colnavn <- c("DtDN1","DtDN2","DtDN3","DtDN4","DtDN5","DtDN6","DtDN7","DtDN8","DtDN9","DtDN10","BoxMeanRT1","BoxMeanRT2","BoxMeanRT3","BoxMeanRT4","BoxMeanRT5","BoxMeanRT6","BoxMeanRT7","BoxMeanRT8","BoxMeanRT9","BoxMeanRT10","BoxVarRT1","BoxVarRT2","BoxVarRT3", "BoxVarRT4", "BoxVarRT5","BoxVarRT6","BoxVarRT7","BoxVarRT8","BoxVarRT9","BoxVarRT10","BoxChoice1","BoxChoice2","BoxChoice3","BoxChoice4","BoxChoice5","BoxChoice6","BoxChoice7","BoxChoice8","BoxChoice9","BoxChoice10","BoxLastProb1","BoxLastProb2","BoxLastProb3","BoxLastProb4","BoxLastProb5","BoxLastProb6","BoxLastProb7","BoxLastProb8","BoxLastProb9","BoxLastProb10")
+Colnavn <- c("BoxDtD1","BoxDtD2","BoxDtD3","BoxDtD4","BoxDtD5","BoxDtD6","BoxDtD7","BoxDtD8","BoxDtD9","BoxDtD10","BoxMeanRT1","BoxMeanRT2","BoxMeanRT3","BoxMeanRT4","BoxMeanRT5","BoxMeanRT6","BoxMeanRT7","BoxMeanRT8","BoxMeanRT9","BoxMeanRT10","BoxVarRT1","BoxVarRT2","BoxVarRT3", "BoxVarRT4", "BoxVarRT5","BoxVarRT6","BoxVarRT7","BoxVarRT8","BoxVarRT9","BoxVarRT10","BoxChoice1","BoxChoice2","BoxChoice3","BoxChoice4","BoxChoice5","BoxChoice6","BoxChoice7","BoxChoice8","BoxChoice9","BoxChoice10","BoxLastProb1","BoxLastProb2","BoxLastProb3","BoxLastProb4","BoxLastProb5","BoxLastProb6","BoxLastProb7","BoxLastProb8","BoxLastProb9","BoxLastProb10")
 BoxTaskLengde <- BoxTaskAll[c(1,6,11,16,21,26,31,36,41,46)]
 BoxTaskTid <- BoxTaskAll[c(2,7,12,17,22,27,32,37,42,47)]
 BoxTaskVar <- BoxTaskAll[c(3,8,13,18,23,28,33,38,43,48)]
@@ -142,4 +142,4 @@ BoxTaskFerdig <- cbind(BoxTaskLengde,BoxTaskTid,BoxTaskVar,BoxTaskValg,BoxTaskPr
 colnames(BoxTaskFerdig) <- Colnavn
 
 #Create CSV-file
-write.csv(BoxTaskFerdig, "BoxTask.csv")
+write.csv(BoxTaskFerdig, "Cleaned data/BoxTask.csv")
