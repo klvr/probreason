@@ -27,4 +27,6 @@ IDTemp <- list.files(path = path, pattern = pattern)
 IDT <- sapply(strsplit(IDTemp, split='trials_5.csv', fixed=TRUE), function(x) (x[1]))
 ID <- sapply(strsplit(IDTemp, split='_beads_task', fixed=TRUE), function(x) (x[1]))
 row.names(DtDN) <- ID
+
+write.csv(DtDN, "beads.csv")
   
