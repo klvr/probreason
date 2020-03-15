@@ -1,6 +1,7 @@
 #Data-cleaning Box-task
 #Very important that the faw-files folder does not contain any other files, and, that you don't have any of them opened
 #as this will create a temp-file in that folders that inhibits this script-file from running properly.
+#Incomplete case rg05le19 removed manually. In the future this should be done automatically, as new (incomplete) cases will stop the script.
 
 #Get the openxlsx package to read Excel-documents (if not installed), and load the package
 pakke <- library()
