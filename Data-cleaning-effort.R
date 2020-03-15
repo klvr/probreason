@@ -1,5 +1,9 @@
 #Data-cleaning Effort-task
-##Manually removed the fdsfds-participant file, as this created a lot of trouble
+#Manually removed the fdsfdsfds-participant file, as this created a lot of trouble
+#In the script, ghgj, htr645 and 56yg are removed as well. Important to leave those files in(!) however the
+#solution I've gone for is not very good, as any additional data would destroy this.
+#In the future incomplete data should be removed in the script, and not manually, but works _for now_.
+
 path <- "/Users/klevjer/R Projects/Probabilistic Reasoning/Raw data/Ambiguity+Effort/" #Set to local path / directory of raw files for Ambiguity+Effort
 EAmbiguity <- "EAmbiguity"
 AmbiguityE <- "AmbiguityE"
