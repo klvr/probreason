@@ -16,3 +16,6 @@ To-do:
 
 Minor To-do:
 - Jan 2020 Presentation Rmd broken by changes to scripts?
+
+Random notes:
+sum(rowSums(BeadsTask[1:5]) < 10) == 16 (21%)
