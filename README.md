@@ -19,3 +19,6 @@ Minor To-do:
 
 Random notes:
 sum(rowSums(BeadsTask[1:5]) < 10) == 16 (21%)
+3XX -> Leo
+0XX -> Lu
+1XX -> Wib
