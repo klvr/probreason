@@ -1,31 +1,39 @@
-#hBayesDM
+#hBayesDM - cra_linear & cra_exp
 
-StartTime <- cbind(Sys.time())
+ARThBayesDMLinear <- hBayesDM::cra_linear(data = paste(getwd(), "/Cleaned data/ART.txt", sep=""),niter = 4000, nwarmup = 1000, indPars = "mean", nchain = 4, ncore = 4, nthin = 1, inits = "vb", vb = FALSE, inc_postpred = FALSE, adapt_delta = 0.95, stepsize = 1, max_treedepth = 10, modelRegressor = FALSE)
 
-ARThBayesDMLinear <- hBayesDM::cra_linear(data = paste(getwd(), "/Cleaned data/ART.txt", sep=""),niter = 4000, nwarmup = 1000, indPars = "mean", nchain = 4, ncore = 4, nthin = 1, inits = "vb", vb = FALSE, inc_postpred = FALSE, adapt_delta = 0.95, stepsize = 1, max_treedepth = 10, modelRegressor = TRUE)
-save(ARThBayesDMLinear, file ="hBayesDMLinear.RData")
+save(ARThBayesDMLinear, file ="Intermidiate data/hBayesDMLinear.RData")
 
-plot(ARThBayesDMLinear, type = "trace") #Visually check convergence of the sampling chains (should look like "hairy caterpillars")
+ARTLinearEst <- ARThBayesDMLinear$allIndPars
 
-rhat(ARThBayesDMLinear) #All Rhat values should be less than or equal to 1.1
+plot(ARThBayesDMLinear, type = "trace", fontSize=11) #Visually check convergence of the sampling chains (should look like "hairy caterpillars")
+
+hBayesDM::rhat(ARThBayesDMLinear) #All Rhat values should be less than or equal to 1.1
+max(hBayesDM::rhat(ARThBayesDMLinear))
 
 plot(ARThBayesDMLinear) #Plotting the posterior distributions of the hyper-parameters (distributions should be unimodal)
 
-printFit(ARThBayesDMLinear) #Show the WAIC and LOOIC model fit estimates
+hBayesDM::printFit(ARThBayesDMLinear) #Show the WAIC and LOOIC model fit estimates
 
-LinearEndTime <- cbind(Sys.time())
+ARThBayesDMExp <- hBayesDM::cra_exp(data = paste(getwd(), "/Cleaned data/ART.txt", sep=""),niter = 4000, nwarmup = 1000, indPars = "mean", nchain = 4, ncore = 4, nthin = 1, inits = "vb", vb = FALSE, inc_postpred = FALSE, adapt_delta = 0.95, stepsize = 1, max_treedepth = 10, modelRegressor = FALSE)
 
-ARThBayesDMExp <- hBayesDM::cra_exp(data = paste(getwd(), "/Cleaned data/ART.txt", sep=""),niter = 4000, nwarmup = 1000, indPars = "mean", nchain = 4, ncore = 4, nthin = 1, inits = "vb", vb = FALSE, inc_postpred = FALSE, adapt_delta = 0.95, stepsize = 1, max_treedepth = 10, modelRegressor = TRUE)
-save(ARThBayesDMExp, file ="hBayesDMExp.RData")
+save(ARThBayesDMExp, file ="Intermidiate data/hBayesDMExp.RData")
+
+ARTExpEst <- ARThBayesDMExp$allIndPars
 
 plot(ARThBayesDMExp, type = "trace") #Visually check convergence of the sampling chains (should look like "hairy caterpillars")
 
-rhat(ARThBayesDMExp) #All Rhat values should be less than or equal to 1.1
+hBayesDM::rhat(ARThBayesDMExp) #All Rhat values should be less than or equal to 1.1
+max(hBayesDM::rhat(ARThBayesDMExp))
 
 plot(ARThBayesDMExp) #Plotting the posterior distributions of the hyper-parameters (distributions should be unimodal)
 
-printFit(ARThBayesDMExp) #Show the WAIC and LOOIC model fit estimates
+hBayesDM::printFit(ARThBayesDMExp) #Show the WAIC and LOOIC model fit estimates
 
-ExpEndTime <- cbind(Sys.time())
+ARTEst <- cbind(ARTLinearEst, ARTExpEst)
+row.names(ARTEst) <- ARTEst[,1]
+ARTEst <- ARTEst[,-c(1,5)]
+names <- c("ARTRiskLinear", "ARTAmbigLinear", "ARTInverseLinear", "ARTRiskExp", "ARTAmbigExp", "ARTInverseExp")
+colnames(ARTEst) <- names
 
-save(c(StartTime, LinearEndTime, ExpEndTime), file = "time.RData")
+write.csv(ARTEst, file = "Cleaned data/ARTEst.csv")
