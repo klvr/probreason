@@ -14,6 +14,8 @@
 
 #IMPORTANT: Files-names must contain the task-name! See line 23
 ## This is not the case for the 2020-data for the Box-task, which are loaded manually
+# IMPORTANT: Script-weakness: The current way of extracting the Box-log files requires them to be in the same location as their respective csv-file (i.e., as is from just downloading the raw files)
+## Probably leads to loss of one Irreg-participant in it's current form
 
 #List all files
 path <- paste(getwd(), "/Raw Data", sep="")
@@ -42,14 +44,16 @@ BeadsToneTaskPath <- tonePath #Rename
 
 #irregbox
 BoxIrregTaskPath <- irregPath #Rename
+BoxIrregTaskPath <- gsub(".csv", ".log", BoxIrregTaskPath) #Fetch the log-files instead
 
 #_box_task_
 BoxTaskPath <- `_box_task_Path` #Rename
 Error <- "irreg"
-BoxTaskPath <- BoxTaskPath[grep(Error, BoxTaskPath, invert=TRUE)] #Remove incorrectly fetched files (naming/placement errors)
+BoxTaskPathLog <- BoxTaskPath[grep(Error, BoxTaskPath, invert=TRUE)] #Remove incorrectly fetched files (naming/placement errors)
+BoxTaskPathLog <- gsub(".csv", ".log", BoxTaskPathLog) #Fetch the log-files instead
 ManualPath <- paste(getwd(),"/Raw Data/2020/BoxTask", sep = "")
 ManualPath <- list.files(ManualPath, pattern = "ID_", recursive = TRUE, all.files = FALSE, full.names = TRUE) #Adds the non-box-named files
-BoxTaskPath <- c(BoxTaskPath, ManualPath) #Fuse together
+BoxTaskPathXlsx <- ManualPath
 
 #Clean-up
-rm(`_box_task_Path`, allfiles, ambiguityPath, beads_taskPath, Error, files, i, irregPath, ManualPath, name, onejarPath, path, tasks, tonePath)
+rm(`_box_task_Path`, allfiles, ambiguityPath, beads_taskPath, Error, files, i, irregPath, ManualPath, name, onejarPath, path, tasks, tonePath, BoxTaskPath)
