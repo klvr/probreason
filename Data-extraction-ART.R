@@ -111,8 +111,8 @@ ambig <- as.numeric(ambig)
 reward_var <- as.numeric(reward_var)
 reward_fix <- as.numeric(reward_fix)
 choice <- as.numeric(Choice)
-ARTaskData <- as.data.frame(cbind(subjID, prob, ambig, reward_var, reward_fix, choice))
+ARTaskhBayDM <- as.data.frame(cbind(subjID, prob, ambig, reward_var, reward_fix, choice))
 
-write.table(ARTaskData, file = paste(getwd(), "/Cleaned data/ART.txt", sep=""), sep = "\t", row.names = FALSE, quote = FALSE)
+write.table(ARTaskhBayDM, file = paste(getwd(), "/Intermidiate data/ART.txt", sep=""), sep = "\t", row.names = FALSE, quote = FALSE)
 
 rm(AEChoice, AEDisp, AEID, AERew, AERewP, AmChoice, AmChoice2, AmDisp, AmID, AmRew, AmRewP, EAChoice, EADisp, EAID, EARew, EARewP, Reward, ambiguity, AmbiguityE, EAmbiguity, path, trials, Choice, Disp, ambig, choice, ID, prob, reward_fix, reward_var, subjID)
