@@ -2,6 +2,7 @@
 
 BoxIrregDtD <- row.names(c("ID", "DtD1", "DtD2", "DtD3", "DtD4"))
 BoxIrregDtD <- as.data.frame(BoxIrregDtD)
+
 for(i in BoxIrregTaskPath) {
   print(i)
   IrrData <- read.delim(i)
@@ -55,6 +56,8 @@ for(i in BoxIrregTaskPath) {
   id <- tail(unlist(id), n=3)
   id <- paste(id, collapse="")
   DtDPart <- cbind(id, length(Trial1[,1]), length(Trial2[,1]), length(Trial3[,1]), length(Trial4[,1]))
+  AllInfo <- as.character(c(id, Trial1[1,2], Trial2[1,2], Trial3[1,2], Trial4[1,2], Trial1[,1], Trial2[,1], Trial3[,1], Trial4[,1]))
   BoxIrregDtD <- rbind(BoxIrregDtD, DtDPart)
   }
+colnames(BoxIrregDtD) <- c("ID", "DtD1", "DtD2", "DtD3", "DtD4")
 
