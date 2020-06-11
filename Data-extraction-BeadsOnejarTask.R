@@ -1,4 +1,5 @@
 #Data extraction BeadsOnejarTask
+## Yet to do: Fix participant ID
 
 path <- BeadsOnejarTaskPath
 pattern <- "trials_2.csv"
@@ -37,3 +38,7 @@ row.names(BeadsOnejarTaskDtD) <- BeadsOnejarTaskDtD[,1]
 BeadsOnejarTaskDtD <- BeadsOnejarTaskDtD[,-1]
 
 rm(DtDN, DtDN1, DtDN2, DtDN3, DtDN4, DtDName, DtDPath, path, pattern)
+
+colnames(BeadsOnejarTaskDtD) <- c("Trial1", "Trial2", "Trial3", "Trial4")
+
+write.csv(BeadsOnejarTaskDtD, paste(getwd(), "/Cleaned data/BeadsOnejarTaskDtD.csv", sep = ""))

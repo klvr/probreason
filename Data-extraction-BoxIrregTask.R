@@ -1,4 +1,5 @@
 #Data extraction BoxIrregTask
+## Yet to do: Remove variables not for further use
 
 BoxIrregDtD <- row.names(c("ID", "DtD1", "DtD2", "DtD3", "DtD4"))
 BoxIrregDtD <- as.data.frame(BoxIrregDtD)
@@ -60,4 +61,4 @@ for(i in BoxIrregTaskPath) {
   BoxIrregDtD <- rbind(BoxIrregDtD, DtDPart)
   }
 colnames(BoxIrregDtD) <- c("ID", "DtD1", "DtD2", "DtD3", "DtD4")
-
+write.csv(BoxIrregDtD, paste(getwd(), "/Cleaned data/BoxIrregTaskDtD.csv", sep =""))

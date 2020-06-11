@@ -1,4 +1,5 @@
 #Data extraction BeadsTwojarTask
+## Yet to do: Fix participant ID
 
 path <- BeadsTwojarTaskPath
 pattern <- "trials_2.csv"
@@ -45,3 +46,5 @@ row.names(BeadsTwojarTaskDtD) <- BeadsTwojarTaskDtD[,1]
 BeadsTwojarTaskDtD <- BeadsTwojarTaskDtD[,-1]
 
 rm(DtDN, DtDN1, DtDN2, DtDN3, DtDN4, DtDN5, DtDName, DtDPath, path, pattern)
+
+write.csv(BeadsTwojarTaskDtD, paste(getwd(), "/Cleaned data/BeadsTwojarTaskDtD.csv", sep = ""))
