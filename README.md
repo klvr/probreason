@@ -51,6 +51,7 @@ To-do:
   - 1XX -> Wib
   - 3XX -> Leo
 - Quality check all extractions.
+- hBayesDM Pareto fail, tuning needed(?).
 - Master script for running sub-scripts.
 - Exclusion according to prereg criteria.
 - Merging.
@@ -58,4 +59,4 @@ To-do:
 - Analysis.
 
 Random working notes:
-sum(rowSums(BeadsTask[1:5]) < 10) == 16 (21%)
+- sum(rowSums(BeadsTask[1:5]) < 10) == 16 (21%) !
