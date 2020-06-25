@@ -50,13 +50,10 @@ To-do:
   - 0XX -> Lu
   - 1XX -> Wib
   - 3XX -> Leo
-- Quality check all extractions.
-- hBayesDM Pareto fail, tuning needed(?).
+- Recode box-sequences and choices
+- Extract choices from beads
 - Master script for running sub-scripts.
 - Exclusion according to prereg criteria.
 - Merging.
 - Ideal Baysian Observer.
 - Analysis.
-
-Random working notes:
-- sum(rowSums(BeadsTask[1:5]) < 10) == 16 (21%) !
