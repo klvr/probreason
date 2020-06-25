@@ -1,5 +1,4 @@
 #Data extraction BoxIrregTask
-## Yet to do: Remove variables not for further use
 
 BoxIrregDtD <- row.names(c("ID", "DtD1", "DtD2", "DtD3", "DtD4"))
 BoxIrregDtD <- as.data.frame(BoxIrregDtD)
@@ -58,7 +57,14 @@ for(i in BoxIrregTaskPath) {
   id <- paste(id, collapse="")
   DtDPart <- cbind(id, length(Trial1[,1]), length(Trial2[,1]), length(Trial3[,1]), length(Trial4[,1]))
   AllInfo <- as.character(c(id, Trial1[1,2], Trial2[1,2], Trial3[1,2], Trial4[1,2], Trial1[,1], Trial2[,1], Trial3[,1], Trial4[,1]))
+  Presses <- AllInfo[c(2,3,4,5)]
+  Sequence <- AllInfo[6:(length(AllInfo))]
+  DtDPart <- cbind(DtDPart, paste(Presses, collapse = ","), paste(Sequence, collapse = ","))
   BoxIrregDtD <- rbind(BoxIrregDtD, DtDPart)
   }
 colnames(BoxIrregDtD) <- c("ID", "DtD1", "DtD2", "DtD3", "DtD4")
-write.csv(BoxIrregDtD, paste(getwd(), "/Cleaned data/BoxIrregTaskDtD.csv", sep =""))
+row.names(BoxIrregDtD) <- paste("X", BoxIrregDtD$ID, sep = "")
+BoxIrregTask <- BoxIrregDtD[-1]
+colnames(BoxIrregTask) <- c("BoxIrregDtD1","BoxIrregDtD2","BoxIrregDtD3","BoxIrregDtD4", "BoxIrregChoices", "BoxIrregSeq")
+
+write.csv(BoxIrregTask, paste(getwd(), "/Cleaned data/BoxIrregTask.csv", sep =""))
