@@ -15,7 +15,7 @@ plot(ARThBayesDMLinear) #Plotting the posterior distributions of the hyper-param
 
 hBayesDM::printFit(ARThBayesDMLinear) #Show the WAIC and LOOIC model fit estimates
 
-ARThBayesDMExp <- hBayesDM::cra_exp(data = paste(getwd(), "/Cleaned data/ART.txt", sep=""),niter = 4000, nwarmup = 1000, indPars = "mean", nchain = 4, ncore = 4, nthin = 1, inits = "vb", vb = FALSE, inc_postpred = FALSE, adapt_delta = 0.95, stepsize = 1, max_treedepth = 10, modelRegressor = FALSE)
+ARThBayesDMExp <- hBayesDM::cra_exp(data = paste(getwd(), "/Intermidiate data/ART.txt", sep=""),niter = 12000, nwarmup = 3000, indPars = "mean", nchain = 7, ncore = 7, nthin = 1, inits = "vb", vb = FALSE, inc_postpred = FALSE, adapt_delta = 0.95, stepsize = 1, max_treedepth = 10, modelRegressor = FALSE)
 
 save(ARThBayesDMExp, file ="Intermidiate data/hBayesDMExp.RData")
 
