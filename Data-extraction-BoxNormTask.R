@@ -1,6 +1,5 @@
 #Data extraction Box(Norm)TaskLog
-## Allinfo disabled now, due to many without full trials => fetching breaks (in it's current form)
-## Does not seperate between decision after 0 and 1 draws (e.g., double press)
+## Two manual fixes, see line 68-70
 
 BoxTaskDtD <- row.names(c("ID", "DtD1", "DtD2", "DtD3", "DtD4"))
 BoxTaskDtD <- as.data.frame(BoxTaskDtD)
@@ -61,9 +60,19 @@ for(i in BoxTaskPathLog) {
   id <- strsplit(id, split="")
   id <- tail(unlist(id), n=3)
   id <- paste(id, collapse="")
-  DtDPart <- cbind(id, length(Trial1[,1]), length(Trial2[,1]), length(Trial3[,1]), length(Trial4[,1]))
-  #AllInfo <- as.character(c(id, Trial1[1,2], Trial2[1,2], Trial3[1,2], Trial4[1,2], Trial1[,1], Trial2[,1], Trial3[,1], Trial4[,1]))
+  Alt <- c(Trial1, Trial2, Trial3, Trial4)
+  DtDPart <- cbind(id, length(Trial1[,1]), length(Trial2[,1]), length(Trial3[,1]), length(Trial4[,1]), paste(Alt, collapse = ","))
   BoxTaskDtD <- rbind(BoxTaskDtD, DtDPart)
 }
-colnames(BoxTaskDtD) <- c("ID", "DtD1", "DtD2", "DtD3", "DtD4")
-write.csv(BoxTaskDtD, paste(getwd(), "/Cleaned data/BoxNormTask.csv", sep =""))
+BoxTaskDtD$id <- as.character(BoxTaskDtD$id)
+BoxTaskDtD[29,1] <- "010" #manual fix for one participant id
+BoxTaskDtD[41,2] <- as.numeric("5") #manual fix for one DtD
+BoxTaskDtD[41,6] <- NA
+row.names(BoxTaskDtD) <- paste("X", BoxTaskDtD$id, sep = "")
+BoxTaskDtD <- BoxTaskDtD[-1]
+colnames(BoxTaskDtD) <- c("BoxNormDtD1","BoxNormDtD2","BoxNormDtD3","BoxNormDtD4", "BoxNormSeqChoice")
+BoxNormTask <- BoxTaskDtD
+
+rm(BoxTaskDtD, DtDPart, IrrData, PartInp, Trial1, Trial2, Trial3, Trial4, Alt, boxchoice1, boxchoice2, boxchoice3, boxchoice4, color, data, i, id, keypress1, keypress2, keypress3, keypress4, keypressed, keypressed1, keypressed2, keypressed3, pressed1, pressed2, pressed3, pressed4, space, spacepressed)
+
+write.csv(BoxNormTask, paste(getwd(), "/Cleaned data/BoxNormTask.csv", sep =""))
