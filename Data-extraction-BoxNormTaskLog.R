@@ -71,8 +71,8 @@ BoxTaskDtD[41,6] <- NA
 row.names(BoxTaskDtD) <- paste("X", BoxTaskDtD$id, sep = "")
 BoxTaskDtD <- BoxTaskDtD[-1]
 colnames(BoxTaskDtD) <- c("BoxNormDtD1","BoxNormDtD2","BoxNormDtD3","BoxNormDtD4", "BoxNormSeqChoice")
-BoxNormTask <- BoxTaskDtD
+BoxNormTaskLog <- BoxTaskDtD
 
 rm(BoxTaskDtD, DtDPart, IrrData, PartInp, Trial1, Trial2, Trial3, Trial4, Alt, boxchoice1, boxchoice2, boxchoice3, boxchoice4, color, data, i, id, keypress1, keypress2, keypress3, keypress4, keypressed, keypressed1, keypressed2, keypressed3, pressed1, pressed2, pressed3, pressed4, space, spacepressed)
 
-write.csv(BoxNormTask, paste(getwd(), "/Cleaned data/BoxNormTaskLog.csv", sep =""))
+write.csv(BoxNormTaskLog, paste(getwd(), "/Cleaned data/BoxNormTaskLog.csv", sep =""))
