@@ -1,6 +1,6 @@
 #hBayesDM - cra_linear & cra_exp
 
-ARThBayesDMLinear <- hBayesDM::cra_linear(data = paste(getwd(), "/Cleaned data/ART.txt", sep=""),niter = 4000, nwarmup = 1000, indPars = "mean", nchain = 4, ncore = 4, nthin = 1, inits = "vb", vb = FALSE, inc_postpred = FALSE, adapt_delta = 0.95, stepsize = 1, max_treedepth = 10, modelRegressor = FALSE)
+ARThBayesDMLinear <- hBayesDM::cra_linear(data = paste(getwd(), "/Intermidiate data/ART.txt", sep=""),niter = 12000, nwarmup = 3000, indPars = "mean", nchain = 7, ncore = 7, nthin = 1, inits = "vb", vb = FALSE, inc_postpred = FALSE, adapt_delta = 0.95, stepsize = 1, max_treedepth = 10, modelRegressor = FALSE)
 
 save(ARThBayesDMLinear, file ="Intermidiate data/hBayesDMLinear.RData")
 
