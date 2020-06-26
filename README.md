@@ -50,6 +50,7 @@ To-do:
   - 0XX -> Lu
   - 1XX -> Wib
   - 3XX -> Leo
+- Quality check for CAPE, and Box2020 yet to do.
 - Recode box-sequences and choices
 - Extract choices from beads
 - Master script for running sub-scripts.
@@ -57,3 +58,6 @@ To-do:
 - Merging.
 - Ideal Baysian Observer.
 - Analysis.
+
+Minor notes:
+- Do lose some participants for BoxNorm due to log-extraction
