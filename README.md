@@ -53,11 +53,11 @@ To-do:
 - Quality check for CAPE, and Box2020 yet to do.
 - Recode box-sequences and choices
 - Extract choices from beads
-- Master script for running sub-scripts.
+- Master script for running sub-scripts, and fetching needed packages (excl. hBayesDM)
 - Exclusion according to prereg criteria.
 - Merging.
 - Ideal Baysian Observer.
 - Analysis.
 
 Minor notes:
-- Do lose some participants for BoxNorm due to log-extraction
+- Do lose some participants for BoxNorm due to log-file extraction
