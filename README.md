@@ -50,14 +50,20 @@ To-do:
   - 0XX -> Lu
   - 1XX -> Wib
   - 3XX -> Leo
-- Quality check for CAPE, and Box2020 yet to do.
-- Recode box-sequences and choices
-- Extract choices from beads
-- Master script for running sub-scripts, and fetching needed packages (excl. hBayesDM)
-- Exclusion according to prereg criteria.
+- Quality check for CAPE.
+- Master script for running sub-scripts.
+- Exclusion according to prereg criteria, and flagging.
 - Merging.
 - Ideal Baysian Observer.
 - Analysis.
 
-Minor notes:
-- Do lose some participants for BoxNorm due to log-file extraction
+_Could_ be improved / collected:
+- ART-hBayes: Run cra_exp once more (more inits), make sure both ambig and risk is set at 0 or 1.
+- BeadsOne: Extract decisions from log-files.
+- BeadsTone: Extract decisions from log-files.
+- BeadsTwo: Extract decisions from log-files (2018-data), and from CSV-files (2020-data).
+- BoxIrreg: Recode answers, recode sequences.
+- BoxLog: Seperate answers and sequences, recode answers, recode sequences.
+- BoxXlsx: Recode choice.
+- Cape: IRT / FA on the items.
+- Overall: Turn all trials in all tasks the same way.
