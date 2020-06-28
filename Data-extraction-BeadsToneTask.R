@@ -56,7 +56,7 @@ BeadsToneTaskDtD <- merge(BeadsToneTaskDtD, DtDN4, by.x = 1, by.y = 0)
 row.names(BeadsToneTaskDtD) <- BeadsToneTaskDtD[,1]
 BeadsToneTask <- BeadsToneTaskDtD[,-1]
 
-rm(DtDN, DtDN1, DtDN2, DtDN3, DtDN4, DtDName, RTMean, RTSkew, DtDPath, path, pattern, BeadsToneTaskDtD)
+rm(DtDN, DtDN1, DtDN2, DtDN3, DtDN4, DtDName, RTMean, RTSkew, DtDPath, path, pattern, BeadsToneTaskDtD, BeadsToneTaskPath)
 
 colnames(BeadsToneTask) <- c("BeadsToneDtD1", "BeadsToneRTmean1", "BeadsToneRTSkew1","BeadsToneDtD2", "BeadsToneRTmean2", "BeadsToneRTSkew2","BeadsToneDtD3", "BeadsToneRTmean3", "BeadsToneRTSkew3","BeadsToneDtD4", "BeadsToneRTmean4", "BeadsToneRTSkew4")
 

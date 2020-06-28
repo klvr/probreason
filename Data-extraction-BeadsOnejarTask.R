@@ -56,7 +56,7 @@ BeadsOnejarTaskDtD <- merge(BeadsOnejarTaskDtD, DtDN4, by.x = 1, by.y = 0)
 row.names(BeadsOnejarTaskDtD) <- BeadsOnejarTaskDtD[,1]
 BeadsOnejarTask <- BeadsOnejarTaskDtD[,-1]
 
-rm(DtDN, DtDN1, DtDN2, DtDN3, DtDN4, DtDName, DtDPath, path, pattern, BeadsOnejarTaskDtD, RTMean, RTSkew)
+rm(DtDN, DtDN1, DtDN2, DtDN3, DtDN4, DtDName, DtDPath, path, pattern, BeadsOnejarTaskDtD, RTMean, RTSkew, BeadsOnejarTaskPath)
 
 colnames(BeadsOnejarTask) <- c("BeadsOnejarDtD1", "BeadsOnejarRTmean1", "BeadsOnejarRTSkew1","BeadsOnejarDtD2", "BeadsOnejarRTmean2", "BeadsOnejarRTSkew2","BeadsOnejarDtD3", "BeadsOnejarRTmean3", "BeadsOnejarRTSkew3","BeadsOnejarDtD4", "BeadsOnejarRTmean4", "BeadsOnejarRTSkew4")
 

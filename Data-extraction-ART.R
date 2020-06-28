@@ -115,4 +115,4 @@ ARTaskhBayDM <- as.data.frame(cbind(subjID, prob, ambig, reward_var, reward_fix,
 
 write.table(ARTaskhBayDM, file = paste(getwd(), "/Intermidiate data/ART.txt", sep=""), sep = "\t", row.names = FALSE, quote = FALSE)
 
-rm(AEChoice, AEDisp, AEID, AERew, AERewP, AmChoice, AmChoice2, AmDisp, AmID, AmRew, AmRewP, EAChoice, EADisp, EAID, EARew, EARewP, Reward, ambiguity, AmbiguityE, EAmbiguity, path, trials, Choice, Disp, ambig, choice, ID, prob, reward_fix, reward_var, subjID)
+rm(AEChoice, AEDisp, AEID, AERew, AERewP, AmChoice, AmChoice2, AmDisp, AmID, AmRew, AmRewP, EAChoice, EADisp, EAID, EARew, EARewP, Reward, ambiguity, AmbiguityE, EAmbiguity, path, trials, Choice, Disp, ambig, choice, ID, prob, reward_fix, reward_var, subjID, ARTaskPath)

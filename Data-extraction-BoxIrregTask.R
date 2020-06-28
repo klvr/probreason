@@ -67,6 +67,6 @@ row.names(BoxIrregDtD) <- paste("X", BoxIrregDtD$ID, sep = "")
 BoxIrregTask <- BoxIrregDtD[-1]
 colnames(BoxIrregTask) <- c("BoxIrregDtD1","BoxIrregDtD2","BoxIrregDtD3","BoxIrregDtD4", "BoxIrregChoices", "BoxIrregSeq")
 
-rm(BoxIrregDtD, DtDPart, IrrData, PartInp, Trial1, Trial2, Trial3, Trial4, AllInfo, boxchoice1, boxchoice2, boxchoice3, boxchoice4, color, data, i, id, keypress1, keypress2, keypress3, keypressed, keypressed1, keypressed2, keypressed3, pressed1, pressed2, pressed3, pressed4, Presses, Sequence, space, spacepressed)
+rm(BoxIrregDtD, DtDPart, IrrData, PartInp, Trial1, Trial2, Trial3, Trial4, AllInfo, boxchoice1, boxchoice2, boxchoice3, boxchoice4, color, data, i, id, keypress1, keypress2, keypress3, keypressed, keypressed1, keypressed2, keypressed3, pressed1, pressed2, pressed3, pressed4, Presses, Sequence, space, spacepressed, BoxIrregTaskPath)
 
 write.csv(BoxIrregTask, paste(getwd(), "/Cleaned data/BoxIrregTask.csv", sep =""))

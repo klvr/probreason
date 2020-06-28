@@ -132,6 +132,6 @@ BeadsTwojarTask <- rbind(BeadsTwojarTask1, BeadsTwojarTask2)
 
 colnames(BeadsTwojarTask) <- c("BeadsTwojarDtD1", "BeadsTwojarRTmean1", "BeadsTwojarRTSkew1","BeadsTwojarDtD2", "BeadsTwojarRTmean2", "BeadsTwojarRTSkew2","BeadsTwojarDtD3", "BeadsTwojarRTmean3", "BeadsTwojarRTSkew3","BeadsTwojarDtD4", "BeadsTwojarRTmean4", "BeadsTwojarRTSkew4","BeadsTwojarDtD5", "BeadsTwojarRTmean5", "BeadsTwojarRTSkew5")
 
-rm(BeadsTwojarTask1, BeadsTwojarTask2, BeadsTwojarTaskDtD, DtDN, DtDN1, DtDN2, DtDN3, DtDN4, DtDN5, DtDName, RTMean, RTSkew, DtDPath, path, pattern)
+rm(BeadsTwojarTask1, BeadsTwojarTask2, BeadsTwojarTaskDtD, DtDN, DtDN1, DtDN2, DtDN3, DtDN4, DtDN5, DtDName, RTMean, RTSkew, DtDPath, path, pattern, BeadsTwojarTaskPath)
 
 write.csv(BeadsTwojarTask, paste(getwd(), "/Cleaned data/BeadsTwojarTask.csv", sep = ""))

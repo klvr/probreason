@@ -163,3 +163,5 @@ names <- rep(names, each = 1, times = 5)
 names2 <- rep(1:10, each = 5)
 names <- paste(names, names2, sep = "")
 colnames(BoxNormTaskXlsx) <- names
+
+rm(BoxTask, BoxTask1, BoxTask2, BoxTask3, BoxTask4, BoxTask6, BoxTask7, BoxTask8, BoxTask10, BoxTask11, BoxTask12, Run, i, ID, lengde, names, names2, path, pathspes, probest, tidperbox, valg, vartidperbox, BoxTaskPathXlsx)

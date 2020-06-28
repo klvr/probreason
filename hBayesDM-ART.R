@@ -37,3 +37,5 @@ names <- c("ARTRiskLinear", "ARTAmbigLinear", "ARTInverseLinear", "ARTRiskExp", 
 colnames(ARTEst) <- names
 
 write.csv(ARTEst, file = "Cleaned data/ARTEst.csv")
+
+rm(names, ARThBayesDMLinear, ARThBayesDMExp, ARTExpEst, ARTLinearEst, ARTaskhBayDM)
