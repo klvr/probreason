@@ -55,5 +55,21 @@ ManualPath <- paste(getwd(),"/Raw Data/2020/BoxTask", sep = "")
 ManualPath <- list.files(ManualPath, pattern = "ID_", recursive = TRUE, all.files = FALSE, full.names = TRUE) #Adds the non-box-named files
 BoxTaskPathXlsx <- ManualPath
 
+pakke <- library()
+if (sum(grepl("openxlsx", pakke$results)) < 1) {
+  install.packages("openxlsx", dependencies = TRUE)
+  library(openxlsx)
+} else {
+  library(openxlsx)
+}
+
+pakke <- library()
+if (sum(grepl("psych", pakke$results)) < 1) {
+  install.packages("psych", dependencies = TRUE)
+  library(psych)
+} else {
+  library(psych)
+}
+
 #Clean-up
-rm(`_box_task_Path`, allfiles, ambiguityPath, beads_taskPath, Error, files, i, irregPath, ManualPath, name, onejarPath, path, tasks, tonePath, BoxTaskPath)
+rm(`_box_task_Path`, allfiles, ambiguityPath, beads_taskPath, Error, files, i, irregPath, ManualPath, name, onejarPath, path, tasks, tonePath, BoxTaskPath, pakke)
