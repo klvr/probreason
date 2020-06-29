@@ -4,8 +4,8 @@ R-scripts for data extraction, cleaning and analysis.
 
 Raw and clean data only uploaded to OSF (GDPR).
 
-Download the data, run the "Loading-files.R"-script, and then use the task-wise script(s) for the task(s) you want data from.
-To run the analysis-script, all task-wise extraction scripts must run first (unless you have the collected cleaned data file).
+Download the data, clone this repository, run the "MasterScript-DataExtractionMerging.R"-script, to extract, clean and merge all data, or use the "Loading-files.R"-script and choose task-wise script(s) for the task(s) you want data from.
+To run the analysis-script, the script above must run first, unless you use the collected clean-data.csv file.
 
 The following tasks are included:
 - ART: Ambiguity and risk avoidance task (Levy et al.).
