@@ -31,10 +31,16 @@ plot(ARThBayesDMExp) #Plotting the posterior distributions of the hyper-paramete
 hBayesDM::printFit(ARThBayesDMExp) #Show the WAIC and LOOIC model fit estimates
 
 ARTEst <- cbind(ARTLinearEst, ARTExpEst)
+ARTEst[,1] <- as.character(ARTEst[,1])
+ARTEst[1,1] <- paste("X", ARTEst[1,1], sep="")
+ARTEst[2,1] <- paste("X", ARTEst[2,1], sep="")
+ARTEst[78:148,1] <- gsub("A", "X", ARTEst[78:148,1])
 row.names(ARTEst) <- ARTEst[,1]
 ARTEst <- ARTEst[,-c(1,5)]
 names <- c("ARTRiskLinear", "ARTAmbigLinear", "ARTInverseLinear", "ARTRiskExp", "ARTAmbigExp", "ARTInverseExp")
 colnames(ARTEst) <- names
+
+
 
 write.csv(ARTEst, file = "Cleaned data/ARTEst.csv")
 
