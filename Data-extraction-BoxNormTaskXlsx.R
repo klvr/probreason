@@ -156,6 +156,9 @@ BoxNormTaskXlsx <- merge(BoxNormTaskXlsx, BoxTask10, by.x = 1, by.y = 0)
 BoxNormTaskXlsx <- merge(BoxNormTaskXlsx, BoxTask11, by.x = 1, by.y = 0)
 BoxNormTaskXlsx <- merge(BoxNormTaskXlsx, BoxTask12, by.x = 1, by.y = 0)
 
+BoxNormTaskXlsx[1,1] <- "X001"
+BoxNormTaskXlsx[2,1] <- "X4621"
+BoxNormTaskXlsx[3,1] <- "X7743"
 row.names(BoxNormTaskXlsx) <- BoxNormTaskXlsx[,1]
 BoxNormTaskXlsx <- BoxNormTaskXlsx[-1]
 names <- c("BoxNormExtDtD", "BoxNormExtRTmean", "BoxNormExtRTSkew", "BoxNormExtChoice", "BoxNormExtProbest")
@@ -163,5 +166,10 @@ names <- rep(names, each = 1, times = 5)
 names2 <- rep(1:10, each = 5)
 names <- paste(names, names2, sep = "")
 colnames(BoxNormTaskXlsx) <- names
+
+#Manual fixes
+BoxNormTaskXlsx <- BoxNormTaskXlsx[-46,] #remove duplicate
+
+write.csv(BoxNormTaskXlsx, paste(getwd(), "/Cleaned data/BoxNormTaskXlsx.csv", sep =""))
 
 rm(BoxTask, BoxTask1, BoxTask2, BoxTask3, BoxTask4, BoxTask6, BoxTask7, BoxTask8, BoxTask10, BoxTask11, BoxTask12, Run, i, ID, lengde, names, names2, path, pathspes, probest, tidperbox, valg, vartidperbox, BoxTaskPathXlsx)
