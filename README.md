@@ -29,6 +29,8 @@ The following tasks are included:
 The following questionnaires are included:
 - CAPE: Community assesment of psychotic traits.
   - Data from 2018 and 2020.
+- AQ: Autism Spectrum Quotient (Baron-Cohen et al. 2006).
+  - Data from 2020.
 - FiveD: Five dimensional curiosity questionnaire.
   - Data from 2020.
 - NfCC: Need for (cognitive) closure questionnaire.
@@ -44,16 +46,14 @@ The following questionnaires are included:
 - Presentation Jan. 2020/: Brief task-presentation from Jan. 2020.
 
 To-do:
+- Merging.
 - Sequences of tasks.
-  - Use time-stamps to check for sequence for 2020.
+  - Use time-stamps to check for sequence for 2020?
 - Experimenter logging.
   - 0XX -> Lu
   - 1XX -> Wib
   - 3XX -> Leo
-- Quality check for CAPE.
-- Master script for running sub-scripts.
 - Exclusion according to prereg criteria, and flagging.
-- Merging.
 - Ideal Baysian Observer.
 - Analysis.
 
@@ -66,4 +66,5 @@ _Could_ be improved / collected:
 - BoxLog: Seperate answers and sequences, recode answers, recode sequences.
 - BoxXlsx: Recode choice.
 - Cape: IRT / FA on the items.
-- Overall: Turn all trials in all tasks the same way.
+- Overall: Turn all trials in all tasks the same way. Remove the small left-over _manual_ fixes in order to accomodate for any new data.
+- Other: Fetch NFCC, AQ and FiveD.
