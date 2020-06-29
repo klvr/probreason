@@ -68,3 +68,15 @@ _Could_ be improved / collected:
 - Cape: IRT / FA on the items.
 - Overall: Turn all trials in all tasks the same way. Remove the small left-over _manual_ fixes in order to accomodate for any new data.
 - Other: Fetch NFCC, AQ and FiveD.
+- Debrief feedback.
+
+Other notes:
+- Variance in ambig and risk attitude estimations.
+- Quantify degree of correct probability estimation during Box-task.
+- 2021: Box-task mix free and v2020. With ART and Dice.
+- Wrong choice after plenty of draws - Flagging (Beads and Box tasks).
+- Extreme probability without decision (Box2020) - Flagging.
+- Box-limit: Encountered "time-out", effect on next trial(s).
+- Different decision-tactics/inference heuristics as models. E.g., streaks.
+- ART questionnaire.
+- Fréchet distance.
