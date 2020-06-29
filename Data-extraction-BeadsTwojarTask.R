@@ -134,4 +134,6 @@ colnames(BeadsTwojarTask) <- c("BeadsTwojarDtD1", "BeadsTwojarRTmean1", "BeadsTw
 
 rm(BeadsTwojarTask1, BeadsTwojarTask2, BeadsTwojarTaskDtD, DtDN, DtDN1, DtDN2, DtDN3, DtDN4, DtDN5, DtDName, RTMean, RTSkew, DtDPath, path, pattern, BeadsTwojarTaskPath)
 
+BeadsTwojarTask <- BeadsTwojarTask[-c(142,143),]
+
 write.csv(BeadsTwojarTask, paste(getwd(), "/Cleaned data/BeadsTwojarTask.csv", sep = ""))
