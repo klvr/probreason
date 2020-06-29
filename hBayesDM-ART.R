@@ -1,8 +1,10 @@
 #hBayesDM - cra_linear & cra_exp
 
+try({load(paste(getwd(), "/Intermidiate data/hBayesDMLinear.RData", sep=""))})
+if (exists("ARThBayesDMLinear")) {print("Data loaded from file")} else {
 ARThBayesDMLinear <- hBayesDM::cra_linear(data = paste(getwd(), "/Intermidiate data/ART.txt", sep=""),niter = 12000, nwarmup = 3000, indPars = "mean", nchain = 7, ncore = 7, nthin = 1, inits = "vb", vb = FALSE, inc_postpred = FALSE, adapt_delta = 0.95, stepsize = 1, max_treedepth = 10, modelRegressor = FALSE)
-
 save(ARThBayesDMLinear, file ="Intermidiate data/hBayesDMLinear.RData")
+}
 
 ARTLinearEst <- ARThBayesDMLinear$allIndPars
 
@@ -15,9 +17,11 @@ plot(ARThBayesDMLinear) #Plotting the posterior distributions of the hyper-param
 
 hBayesDM::printFit(ARThBayesDMLinear) #Show the WAIC and LOOIC model fit estimates
 
-ARThBayesDMExp <- hBayesDM::cra_exp(data = paste(getwd(), "/Intermidiate data/ART.txt", sep=""),niter = 12000, nwarmup = 3000, indPars = "mean", nchain = 7, ncore = 7, nthin = 1, inits = "vb", vb = FALSE, inc_postpred = FALSE, adapt_delta = 0.95, stepsize = 1, max_treedepth = 10, modelRegressor = FALSE)
-
-save(ARThBayesDMExp, file ="Intermidiate data/hBayesDMExp.RData")
+try({load(paste(getwd(), "/Intermidiate data/hBayesDMExp.RData", sep=""))})
+if (exists("ARThBayesDMExp")) {print("Data loaded from file")} else {
+  ARThBayesDMExp <- hBayesDM::cra_exp(data = paste(getwd(), "/Intermidiate data/ART.txt", sep=""),niter = 12000, nwarmup = 3000, indPars = "mean", nchain = 7, ncore = 7, nthin = 1, inits = "vb", vb = FALSE, inc_postpred = FALSE, adapt_delta = 0.95, stepsize = 1, max_treedepth = 10, modelRegressor = FALSE)
+  save(ARThBayesDMExp, file ="Intermidiate data/hBayesDMExp.RData")
+}
 
 ARTExpEst <- ARThBayesDMExp$allIndPars
 
@@ -39,8 +43,6 @@ row.names(ARTEst) <- ARTEst[,1]
 ARTEst <- ARTEst[,-c(1,5)]
 names <- c("ARTRiskLinear", "ARTAmbigLinear", "ARTInverseLinear", "ARTRiskExp", "ARTAmbigExp", "ARTInverseExp")
 colnames(ARTEst) <- names
-
-
 
 write.csv(ARTEst, file = "Cleaned data/ARTEst.csv")
 
