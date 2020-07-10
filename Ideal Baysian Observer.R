@@ -1,4 +1,5 @@
 # Ideale Baysian Observer
+## Missing: 2018 extracted sequences and IBO for those
 
 # 2018
 ## One Jar
@@ -41,6 +42,7 @@ AllBoxSeqLimit6 <- c("Seq_6or9a_2","Seq_6or9b_2","Seq_6or9b_3")
 AllBoxSeqLimit9  <- c("Seq_6or9a_1","Seq_6or9a_3","Seq_6or9b_1")
 
 # Beads
+## BF between the two competing hypothesis (i.e., correct jar vs. wrong jar), using log(BF)
 ThresholdBeads <- as.numeric()
 for (i in AllBeadsSeq) {
 seq <- eval(parse(text = i))
@@ -48,12 +50,13 @@ seq <- cumsum(seq)
 lengde <- seq(1, length(seq), by = 1)
 low <- (as.numeric(unlist(strsplit(i, "_[0-9][0-9]"))[2]) / 100)
 high <- 1-low
-Threshold <- dbinom(seq, lengde, prob = high) / dbinom(seq, lengde, prob = low)
+Threshold <- log(dbinom(seq, lengde, prob = high) / dbinom(seq, lengde, prob = low))
 ThresholdBeads <- cbind(ThresholdBeads, Threshold)
 }
 colnames(ThresholdBeads) <- AllBeadsSeq
 
 # Box
+## Combinatorics, yields a number between 0 and 1, where 1 is IO can make a certain choice
 ThresholdBox12 <- as.numeric()
 for (i in AllBoxSeqUnlimit) {
 seq <- eval(parse(text = i))
