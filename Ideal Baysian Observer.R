@@ -42,7 +42,7 @@ AllBoxSeqLimit6 <- c("Seq_6or9a_2","Seq_6or9b_2","Seq_6or9b_3")
 AllBoxSeqLimit9  <- c("Seq_6or9a_1","Seq_6or9a_3","Seq_6or9b_1")
 
 # Beads
-## BF between the two competing hypothesis (i.e., correct jar vs. wrong jar), using log(BF)
+## BF/MAP between the two competing hypothesis (i.e., correct jar vs. wrong jar), using evidence for 1 / evidence for 1+2
 ThresholdBeads <- as.numeric()
 for (i in AllBeadsSeq) {
 seq <- eval(parse(text = i))
@@ -50,7 +50,7 @@ seq <- cumsum(seq)
 lengde <- seq(1, length(seq), by = 1)
 low <- (as.numeric(unlist(strsplit(i, "_[0-9][0-9]"))[2]) / 100)
 high <- 1-low
-Threshold <- log(dbinom(seq, lengde, prob = high) / dbinom(seq, lengde, prob = low))
+Threshold <- (dbinom(seq, lengde, prob = high) / (dbinom(seq, lengde, prob = low)+dbinom(seq, lengde, prob = high)))
 ThresholdBeads <- cbind(ThresholdBeads, Threshold)
 }
 colnames(ThresholdBeads) <- AllBeadsSeq
