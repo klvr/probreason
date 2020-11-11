@@ -25,7 +25,7 @@ All <- merge(All, BoxNormTaskXlsx, by = "row.names", all.x = TRUE, all.y = TRUE)
 row.names(All) <- All[,1]
 All <- All[,-1]
 
-All <- merge(All, Cape, by = "row.names", all.x = TRUE, all.y = TRUE)
+All <- merge(All, Cape, by = "row.names", all.x = TRUE, all.y = FALSE)
 row.names(All) <- All[,1]
 All <- All[,-1]
 
