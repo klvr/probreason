@@ -161,6 +161,9 @@ BoxNormTaskXlsx[2,1] <- "X4621"
 BoxNormTaskXlsx[3,1] <- "X7743"
 BoxNormTaskXlsx[15,1] <- "EN04IR22"
 BoxNormTaskXlsx[32,1] <- "EN06IR08"
+BoxNormTaskXlsx[52,1] <- "MA06HA94"
+BoxNormTaskXlsx[47,1] <- "kroase"
+BoxNormTaskXlsx[58,1] <- "NE05EL22"
 
 row.names(BoxNormTaskXlsx) <- BoxNormTaskXlsx[,1]
 BoxNormTaskXlsx <- BoxNormTaskXlsx[-1]

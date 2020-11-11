@@ -44,6 +44,22 @@ Cape2018[36:48,1] <- as.character(paste("0", seq(from=10, to=22), sep =""))
 Cape2018[,1] <- paste("X", Cape2018[,1], sep ="")
 
 Cape <- rbind(Cape2020, Cape2018)
+Cape[,1] <- as.character(Cape[,1])
+Cape[68,1] <- "kroase" #See Manual-ID-fix.R
+Cape[1,1] <- "ad03im02"
+Cape[6,1] <- "AU06NE01"
+Cape[14,1] <- "ELEN1NT29"
+Cape[24,1] <- "en05ar27"
+Cape[42,1] <- "en08ar12"
+Cape[69,1] <- "lavarn"
+Cape[80,1] <- "nd03ir04"
+Cape[89,1] <- "on06lf03"
+Cape[104,1] <- "STERIG"
+Cape[50,1] <- "EN05AR25"
+Cape[40,1] <- "EN06AS30"
+Cape[36,1] <- "EN6NE21"
+Cape[91,1] <- "id06ik27"
+Cape[97,1] <- "IE05LD08"
 row.names(Cape) <- Cape[,1]
 Cape <- Cape[,-1]
 colnames(Cape) <- c("CapeP", "CapeControl")

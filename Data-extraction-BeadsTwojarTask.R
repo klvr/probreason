@@ -127,6 +127,7 @@ BeadsTwojarTaskDtD <- merge(BeadsTwojarTaskDtD, DtDN5, by.x = 1, by.y = 0)
 
 BeadsTwojarTaskDtD[44,1] <- "HL07EN21" #See Manual-ID-fix.R
 BeadsTwojarTaskDtD[25,1] <- "en08ar12"
+BeadsTwojarTaskDtD[41,1] <- "kroase"
 
 row.names(BeadsTwojarTaskDtD) <- BeadsTwojarTaskDtD[,1]
 BeadsTwojarTask2 <- BeadsTwojarTaskDtD[,-1]
