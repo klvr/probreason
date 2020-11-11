@@ -159,6 +159,9 @@ BoxNormTaskXlsx <- merge(BoxNormTaskXlsx, BoxTask12, by.x = 1, by.y = 0)
 BoxNormTaskXlsx[1,1] <- "EN3HN11" #see "Manual-ID-fix.R"
 BoxNormTaskXlsx[2,1] <- "X4621"
 BoxNormTaskXlsx[3,1] <- "X7743"
+BoxNormTaskXlsx[15,1] <- "EN04IR22"
+BoxNormTaskXlsx[32,1] <- "EN06IR08"
+
 row.names(BoxNormTaskXlsx) <- BoxNormTaskXlsx[,1]
 BoxNormTaskXlsx <- BoxNormTaskXlsx[-1]
 names <- c("BoxNormExtDtD", "BoxNormExtRTmean", "BoxNormExtRTSkew", "BoxNormExtChoice", "BoxNormExtProbest")

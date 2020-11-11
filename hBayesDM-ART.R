@@ -39,6 +39,8 @@ ARTEst[,1] <- as.character(ARTEst[,1])
 ARTEst[1,1] <- paste("X", ARTEst[1,1], sep="")
 ARTEst[2,1] <- paste("X", ARTEst[2,1], sep="")
 ARTEst[78:148,1] <- gsub("A", "X", ARTEst[78:148,1])
+ARTEst[39,1] <- "ON05NS23" #See Manual-ID-fix.R
+ARTEst[73,1] <- "STERIG"
 row.names(ARTEst) <- ARTEst[,1]
 ARTEst <- ARTEst[,-c(1,5)]
 names <- c("ARTRiskLinear", "ARTAmbigLinear", "ARTInverseLinear", "ARTRiskExp", "ARTAmbigExp", "ARTInverseExp")
