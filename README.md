@@ -5,7 +5,7 @@ R-scripts for data extraction, cleaning and analysis.
 Raw and clean data only uploaded to OSF (GDPR).
 
 Download the data, clone this repository, run the "MasterScript-DataExtractionMerging.R"-script, to extract, clean and merge all data, or use the "Loading-files.R"-script and choose task-wise script(s) for the task(s) you want data from.
-To run the analysis-script, the script above must run first, unless you use the collected clean-data.csv file.
+To run the analysis-script, the script above must run first, unless you use the collected AllData.csv file.
 
 The following tasks are included:
 - ART: Ambiguity and risk avoidance task (Levy et al.).
@@ -44,21 +44,19 @@ The following questionnaires are included:
 - Obsolete scripts/: Scripts no longer in use, but might contain useful sniippets.
 - Tasks and other files/: The tasks and questionnaires, as well as other non-data related files from OSF.
 - Presentation Jan. 2020/: Brief task-presentation from Jan. 2020.
+- Presentation Aug. 2020/: Brief presentation for PhD pitch, August 2020.
+- Analyses/: Random files saved relating to analyses.
+- Article/: All files relating to the final article.
 
 To-do:
-- Merging.
-- Sequences of tasks.
-  - Use time-stamps to check for sequence for 2020?
-- Experimenter logging.
-  - 0XX -> Lu
-  - 1XX -> Wib
-  - 3XX -> Leo
 - Exclusion according to prereg criteria, and flagging.
 - Ideal Baysian Observer.
+  - 2020: Done (minus box-limited).
+  - 2018: Not done (same as 2020, or competing ratios?).
+- Demographics for 2020? 2018 in debrief.
 - Analysis.
 
 _Could_ be improved / collected:
-- ART-hBayes: Run cra_exp once more (more inits), make sure both ambig and risk is set at 0 or 1.
 - BeadsOne: Extract decisions from log-files.
 - BeadsTone: Extract decisions from log-files.
 - BeadsTwo: Extract decisions from log-files (2018-data), and from CSV-files (2020-data).
@@ -66,7 +64,6 @@ _Could_ be improved / collected:
 - BoxLog: Seperate answers and sequences, recode answers, recode sequences.
 - BoxXlsx: Recode choice.
 - Cape: IRT / FA on the items.
-- Overall: Turn all trials in all tasks the same way. Remove the small left-over _manual_ fixes in order to accomodate for any new data.
 - Other: Fetch NFCC, AQ and FiveD.
 - Debrief feedback.
 
