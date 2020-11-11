@@ -1,13 +1,13 @@
 # Probabilistic reasoning & information sampling
 
-R-scripts for data extraction, cleaning and analysis.
+### R-scripts for data extraction, cleaning and analysis.
 
-Raw and clean data only uploaded to OSF (GDPR).
+### Raw and clean data only uploaded to OSF (GDPR).
 
-Download the data, clone this repository, run the "MasterScript-DataExtractionMerging.R"-script, to extract, clean and merge all data, or use the "Loading-files.R"-script and choose task-wise script(s) for the task(s) you want data from.
-To run the analysis-script, the script above must run first, unless you use the collected AllData.csv file.
+#### Download the data, clone this repository, run the "MasterScript-DataExtractionMerging.R"-script, to extract, clean and merge all data, or use the "Loading-files.R"-script and choose task-wise script(s) for the task(s) you want data from.
+#### To run the analysis-script, the script above must run first, unless you use the collected AllData.csv file.
 
-The following tasks are included:
+#### The following tasks are included:
 - ART: Ambiguity and risk avoidance task (Levy et al.).
   - Data from 2018 and 2020.
 - Beads Tasks:
@@ -26,7 +26,7 @@ The following tasks are included:
   - BoxNew: Box opening task, with grid placement of the boxes, both no limit and limit trials, multiple colours, no ratio provided. Fixed sequences.
     - Data from 2020.
 
-The following questionnaires are included:
+#### The following questionnaires are included:
 - CAPE: Community assesment of psychotic traits.
   - Data from 2018 and 2020.
 - AQ: Autism Spectrum Quotient (Baron-Cohen et al. 2006).
@@ -36,7 +36,7 @@ The following questionnaires are included:
 - NfCC: Need for (cognitive) closure questionnaire.
   - Data from 2020
 
-(Local) File-structure:
+#### (Local) File-structure:
 - All R-scripts in wd.
 - Raw data/: Folder subfolders with raw-data.
 - Intermidiate data/: Data saved before further use (e.g., ART long-format for hBayesDM, and hBayesDM outputs).
@@ -48,7 +48,7 @@ The following questionnaires are included:
 - Analyses/: Random files saved relating to analyses.
 - Article/: All files relating to the final article.
 
-To-do:
+#### To-do:
 - Exclusion according to prereg criteria, and flagging.
 - Ideal Baysian Observer.
   - 2020: Done (minus box-limited).
@@ -56,7 +56,7 @@ To-do:
 - Demographics for 2020? 2018 in debrief.
 - Analysis.
 
-_Could_ be improved / collected:
+#### _Could_ be improved / collected:
 - BeadsOne: Extract decisions from log-files.
 - BeadsTone: Extract decisions from log-files.
 - BeadsTwo: Extract decisions from log-files (2018-data), and from CSV-files (2020-data).
@@ -67,7 +67,7 @@ _Could_ be improved / collected:
 - Other: Fetch NFCC, AQ and FiveD.
 - Debrief feedback.
 
-Other notes:
+#### Other (random) notes:
 - Variance in ambig and risk attitude estimations.
 - Quantify degree of correct probability estimation during Box-task.
 - 2021: Box-task mix free and v2020. With ART and Dice.
