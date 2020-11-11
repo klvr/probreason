@@ -2,7 +2,7 @@
 
 ### R-scripts for data extraction, cleaning and analysis.
 
-### Raw and clean data only uploaded to OSF (GDPR).
+#### Raw and clean data only uploaded to OSF (GDPR).
 
 #### Download the data, clone this repository, run the "MasterScript-DataExtractionMerging.R"-script, to extract, clean and merge all data, or use the "Loading-files.R"-script and choose task-wise script(s) for the task(s) you want data from.
 #### To run the analysis-script, the script above must run first, unless you use the collected AllData.csv file.
