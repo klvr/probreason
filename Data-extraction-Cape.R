@@ -21,10 +21,12 @@ control <- c(5,12,22)
 capp <- c(1,2,3,4,6,7,8,9,10,11,13,14,15,16,17,18,19,20,21,23)
 control <- control + 13
 capp <- capp + 13
+aq <- c(37:64)
 id <- as.character(Cape2020[,2])
 capp <- as.numeric(rowSums(Cape2020[,capp]))
 control <- as.numeric(rowSums(Cape2020[,control]))
-Cape2020 <- cbind(id, capp, control)
+aq <- as.numeric(rowSums(Cape2020[,aq]))
+Cape2020 <- cbind(id, capp, control, aq)
 
 #Manual fix of participant-numbers
 Cape2020 <- Cape2020[-1,]
@@ -43,7 +45,7 @@ Cape2018[27:35,1] <- as.character(paste("00", seq(from=1, to=9), sep =""))
 Cape2018[36:48,1] <- as.character(paste("0", seq(from=10, to=22), sep =""))
 Cape2018[,1] <- paste("X", Cape2018[,1], sep ="")
 
-Cape <- rbind(Cape2020, Cape2018)
+Cape <- merge(Cape2020, Cape2018, all = TRUE)
 Cape[,1] <- as.character(Cape[,1])
 Cape[68,1] <- "kroase" #See Manual-ID-fix.R
 Cape[1,1] <- "ad03im02"
@@ -62,7 +64,7 @@ Cape[91,1] <- "id06ik27"
 Cape[97,1] <- "IE05LD08"
 row.names(Cape) <- Cape[,1]
 Cape <- Cape[,-1]
-colnames(Cape) <- c("CapeP", "CapeControl")
+colnames(Cape) <- c("CapeP", "CapeControl", "AQ")
 
 write.csv(Cape, paste(getwd(), "/Cleaned data/CAPE.csv", sep=""))
 
