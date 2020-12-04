@@ -7,7 +7,7 @@
 ## Tone
 ### Seq1_8515, Seq3_8515, Seq1_6040, Seq3_6040
 ## Two Jars
-### Seq1_8515, Seq3_8515, Seq1_6040, Seq3_6040, Seq4_8515
+### Seq1_8515, Seq3_8515, Seq1_6040, Seq3_6040
 ## Box Irreg
 ### Free sequence (extracted)
 ## Box Norm
