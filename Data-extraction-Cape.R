@@ -68,4 +68,4 @@ colnames(Cape) <- c("CapeP", "CapeControl", "AQ")
 
 write.csv(Cape, paste(getwd(), "/Cleaned data/CAPE.csv", sep=""))
 
-rm(Cape2018, Cape2020, score, CapePath, capp, control, i, id, Path)
+rm(Cape2018, Cape2020, score, CapePath, capp, control, i, id, Path, aq)
