@@ -28,5 +28,3 @@ All <- All[,-1]
 All <- merge(All, Cape, by = "row.names", all.x = TRUE, all.y = FALSE)
 row.names(All) <- All[,1]
 All <- All[,-1]
-
-write.csv(All, file = paste(getwd(), "/Cleaned data/AllData.csv", sep =""))
