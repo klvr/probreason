@@ -176,6 +176,49 @@ colnames(BoxNormTaskXlsx) <- names
 #Manual fixes
 BoxNormTaskXlsx <- BoxNormTaskXlsx[-46,] #remove duplicate
 
+#Prob.est direction fix
+probestcol <- c(5,10,15,20,25,30,35,40,45,50)
+for (i in probestcol) {
+  seq <- (1:length(BoxNormTaskXlsx[,5]))
+  BoxNormTaskXlsx[,i] <- as.numeric(as.character(BoxNormTaskXlsx[,i]))
+  for (x in seq) {
+    if(BoxNormTaskXlsx[x,i] < 5) {BoxNormTaskXlsx[x,i] <- 10-BoxNormTaskXlsx[x,i]}
+  }
+}
+
+#Recoding final choice
+## 1: Correct, 0: Incorrect, -1: Didn't make a choice
+seq <- (1:length(BoxNormTaskXlsx[,4]))
+BoxNormTaskXlsx[,4] <- as.character(BoxNormTaskXlsx[,4])
+for (i in seq){if(BoxNormTaskXlsx[i,4]=="Red"){BoxNormTaskXlsx[i,4] <- "1"}}
+BoxNormTaskXlsx[,9] <- as.character(BoxNormTaskXlsx[,9])
+for (i in seq){if(BoxNormTaskXlsx[i,9]=="Red"){BoxNormTaskXlsx[i,9] <- "1"}}
+for (i in seq){if(BoxNormTaskXlsx[i,9]=="Blue"){BoxNormTaskXlsx[i,9] <- "0"}}
+BoxNormTaskXlsx[,14] <- as.character(BoxNormTaskXlsx[,14])
+for (i in seq){if(BoxNormTaskXlsx[i,14]=="Yellow"){BoxNormTaskXlsx[i,14] <- "1"}}
+for (i in seq){if(BoxNormTaskXlsx[i,14]=="Green"){BoxNormTaskXlsx[i,14] <- "0"}}
+BoxNormTaskXlsx[,19] <- as.character(BoxNormTaskXlsx[,19])
+for (i in seq){if(BoxNormTaskXlsx[i,19]=="Purple"){BoxNormTaskXlsx[i,19] <- "1"}}
+for (i in seq){if(BoxNormTaskXlsx[i,19]=="White"){BoxNormTaskXlsx[i,19] <- "0"}}
+BoxNormTaskXlsx[,24] <- as.character(BoxNormTaskXlsx[,24])
+for (i in seq){if(BoxNormTaskXlsx[i,24]=="Light blue"){BoxNormTaskXlsx[i,24] <- "1"}}
+for (i in seq){if(BoxNormTaskXlsx[i,24]=="Red"){BoxNormTaskXlsx[i,24] <- "0"}}
+BoxNormTaskXlsx[,29] <- as.character(BoxNormTaskXlsx[,29])
+for (i in seq){if(BoxNormTaskXlsx[i,29]=="Yellow"){BoxNormTaskXlsx[i,29] <- "1"}}
+for (i in seq){if(BoxNormTaskXlsx[i,29]=="Light Green"){BoxNormTaskXlsx[i,29] <- "0"}}
+BoxNormTaskXlsx[,34] <- as.character(BoxNormTaskXlsx[,34])
+for (i in seq){if(BoxNormTaskXlsx[i,34]=="Light purple"){BoxNormTaskXlsx[i,34] <- "1"}}
+for (i in seq){if(BoxNormTaskXlsx[i,34]=="Yellowish white"){BoxNormTaskXlsx[i,34] <- "0"}}
+BoxNormTaskXlsx[,39] <- as.character(BoxNormTaskXlsx[,39])
+for (i in seq){if(BoxNormTaskXlsx[i,39]=="Red"){BoxNormTaskXlsx[i,39] <- "1"}}
+for (i in seq){if(BoxNormTaskXlsx[i,39]=="Green"){BoxNormTaskXlsx[i,39] <- "0"}}
+BoxNormTaskXlsx[,44] <- as.character(BoxNormTaskXlsx[,44])
+for (i in seq){if(BoxNormTaskXlsx[i,44]=="Pink"){BoxNormTaskXlsx[i,44] <- "1"}}
+for (i in seq){if(BoxNormTaskXlsx[i,44]=="Green"){BoxNormTaskXlsx[i,44] <- "0"}}
+BoxNormTaskXlsx[,49] <- as.character(BoxNormTaskXlsx[,49])
+for (i in seq){if(BoxNormTaskXlsx[i,49]=="Blue"){BoxNormTaskXlsx[i,49] <- "1"}}
+for (i in seq){if(BoxNormTaskXlsx[i,49]=="Light Yellow"){BoxNormTaskXlsx[i,49] <- "0"}}
+
 write.csv(BoxNormTaskXlsx, paste(getwd(), "/Cleaned data/BoxNormTaskXlsx.csv", sep =""))
 
 rm(BoxTask, BoxTask1, BoxTask2, BoxTask3, BoxTask4, BoxTask6, BoxTask7, BoxTask8, BoxTask10, BoxTask11, BoxTask12, Run, i, ID, lengde, names, names2, path, pathspes, probest, tidperbox, valg, vartidperbox, BoxTaskPathXlsx)
