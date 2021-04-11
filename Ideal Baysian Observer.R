@@ -19,6 +19,10 @@
 ## Box Norm
 ### colour_sequences_12 (3 seqs), colour_sequences_6or9_a (3 seqs), colour_sequences_6or9_b (3 seqs)
 
+# Set up replacement data.frame
+IBO <- All[,c(7,10,13,16,19,22,25,28,31,34,37,40,43,46,47,48,49,52,53,54,55,57,62,67,72,77,82,87,92,97,102)]
+for (i in 1:ncol(IBO)) {IBO[,i] <- as.numeric(as.character(IBO[,i]))}
+
 # Actual sequences Beads-tasks
 Seq1_8515 <- c(rep(1, 9), 0, rep(1,10))
 Seq2_8515 <- c(rep(1, 16), 0, rep(1, 3))
@@ -98,6 +102,33 @@ ThresholdBox6 <- cbind(ThresholdBox6, ThresholdSeq)
 }
 colnames(ThresholdBox6) <- AllBoxSeqLimit6
 
+# Replace DtD with I(B)O in IBO data.frame (for all Beads-tasks, and fixed sequence Box-tasks [free sequence in IBO-FreeSequenceBox.R])
+for (i in 1:length(IBO[,1])){
+  IBO[i,1] <- ThresholdBeads[IBO[i,1],1]
+  IBO[i,2] <- ThresholdBeads[IBO[i,2],2]
+  IBO[i,3] <- ThresholdBeads[IBO[i,3],5]
+  IBO[i,4] <- ThresholdBeads[IBO[i,4],6]
+  IBO[i,5] <- ThresholdBeads[IBO[i,5],1]
+  IBO[i,6] <- ThresholdBeads[IBO[i,6],2]
+  IBO[i,7] <- ThresholdBeads[IBO[i,7],5]
+  IBO[i,8] <- ThresholdBeads[IBO[i,8],6]
+  IBO[i,9] <- ThresholdBeads[IBO[i,9],1]
+  IBO[i,10] <- ThresholdBeads[IBO[i,10],2]
+  IBO[i,11] <- ThresholdBeads[IBO[i,11],5]
+  IBO[i,12] <- ThresholdBeads[IBO[i,12],6]
+  IBO[i,13] <- ThresholdBeads[IBO[i,13],4]
+  IBO[i,23] <- ThresholdBox12[IBO[i,23],1]
+  IBO[i,24] <- ThresholdBox12[IBO[i,24],2]
+  IBO[i,25] <- ThresholdBox12[IBO[i,25],3]
+  IBO[i,26] <- ThresholdBox9[IBO[i,26],1]
+  IBO[i,27] <- ThresholdBox6[IBO[i,27],1]
+  IBO[i,28] <- ThresholdBox9[IBO[i,28],2]
+  IBO[i,29] <- ThresholdBox9[IBO[i,29],3]
+  IBO[i,30] <- ThresholdBox6[IBO[i,30],2]
+  IBO[i,31] <- ThresholdBox6[IBO[i,31],3]
+}
+
+
 #Box free sequence recoding
 ## Irreg
 ### Trial1
@@ -125,20 +156,24 @@ IrregCol <- rbind(IrregCol1,IrregCol2,IrregCol3,IrregCol4)
 ## Norm
 ### Trial1
 sequence <- c(0,0,0,1,0,0,0,0,0,0,1,0,0,0,1)
+Trial <- rep(1,15)
 NormCol1 <- paste(rep("box_",15),seq(1,15,1),sep="")
-NormCol1 <- cbind(NormCol1, sequence)
+NormCol1 <- cbind(NormCol1, sequence, Trial)
 ### Trial2
 sequence <- c(1,1,1,1,1,0,1,1,1,0,1,1,0,1,1)
+Trial <- rep(2,15)
 NormCol2 <- c("box",paste(rep("box_",14),seq(16,29,1),sep=""))
-NormCol2 <- cbind(NormCol2, sequence)
+NormCol2 <- cbind(NormCol2, sequence, Trial)
 ### Trial3
 sequence <- c(1,0,1,1,0,1,0,1,0,1,1,0,0,1,1)
+Trial <- rep(3,15)
 NormCol3 <- paste(rep("box_",15),seq(30,44,1),sep="")
-NormCol3 <- cbind(NormCol3, sequence)
+NormCol3 <- cbind(NormCol3, sequence, Trial)
 ### Trial4
 sequence <- c(1,0,0,1,0,0,1,0,0,0,1,0,0,0,1)
+Trial <- rep(4,15)
 NormCol4 <- paste(rep("box_",15),seq(45,59,1),sep="")
-NormCol4 <- cbind(NormCol4, sequence)
+NormCol4 <- cbind(NormCol4, sequence, Trial)
 ### All
 NormCol <- rbind(NormCol1, NormCol2, NormCol3, NormCol4)
 
