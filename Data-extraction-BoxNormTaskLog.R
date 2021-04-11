@@ -1,5 +1,5 @@
 #Data extraction Box(Norm)TaskLog
-## Two manual fixes, see line 68-70
+## Two manual fixes, see line 68-70 - Task not healthy, e.g., participant 304 lost a round, and got answer to trial 1 recorded for trial 2. Correctly(ish) recorded as NA, however others, e.g., 012, get things recorded even with error.
 
 BoxTaskDtD <- row.names(c("ID", "DtD1", "DtD2", "DtD3", "DtD4"))
 BoxTaskDtD <- as.data.frame(BoxTaskDtD)
