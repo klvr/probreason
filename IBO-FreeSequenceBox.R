@@ -40,7 +40,20 @@ BoxIrregIBO$BoxIrregIBODtD4
 
 
 test <- BoxIrregIBO
-for (i in BoxIrregIBO[!is.na(BoxIrregIBO$BoxIrregIBODtD1),]) {test[i,7] <- test[80, 7][[1]][1:test[80,1]]}
+test <- BoxIrregIBO[!is.na(BoxIrregIBO$BoxIrregIBODtD1),]
+for (i in 1:nrow(test)){
+  Trial1 <- test[i,7][[1]][1:test[i,1]]
+  Trial2 <- test[i, 7][[1]][(1+test[i,1]):(test[i,1]+test[i,2])]
+  Trial3 <- test[i, 7][[1]][(1+test[i,1]+test[i,2]):(test[i,1]+test[i,2]+test[i,3])]
+  Trial4 <- test[i, 7][[1]][(1+test[i,1]+test[i,2]+test[i,3]):(test[i,1]+test[i,2]+test[i,3]+test[i,4])]
+  Trial1 <- IrregCol[IrregCol[,1] %in% Trial1 ==TRUE,2]
+  Trial2 <- IrregCol[IrregCol[,1] %in% Trial2 ==TRUE,2]
+  Trial3 <- IrregCol[IrregCol[,1] %in% Trial3 ==TRUE,2]
+  Trial4 <- IrregCol[IrregCol[,1] %in% Trial4 ==TRUE,2]
+}
+
+
+for (i in BoxIrregIBO[!is.na(BoxIrregIBO$BoxIrregIBODtD1),]) {test[i,"test"] <- test[i, 7][[1]][1:test[i,1]]}
 test[80, 7][[1]][1:test[80,1]]
 test[80, 7][[1]][(1+test[80,1]):(test[80,1]+test[80,2])]
 test[80, 7][[1]][(1+test[80,1]+test[80,2]):(test[80,1]+test[80,2]+test[80,3])]
