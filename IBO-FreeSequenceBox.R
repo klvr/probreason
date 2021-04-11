@@ -61,3 +61,6 @@ IBO[!is.na(IBO[,14]),15] <- BoxIrregIBOCol[,10]
 IBO[!is.na(IBO[,14]),16] <- BoxIrregIBOCol[,11]
 IBO[!is.na(IBO[,14]),17] <- BoxIrregIBOCol[,12]
 
+#2018
+## Norm
+## REMOVED - Original task-script cannot be trusted, and thus not the extraction either, must be fixed before used.
