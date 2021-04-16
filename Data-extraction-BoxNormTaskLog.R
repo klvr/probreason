@@ -4,9 +4,7 @@
 #Set-up
 BoxTaskDtD <- row.names(c("ID", "DtD1", "DtD2", "DtD3", "DtD4"))
 BoxTaskDtD <- as.data.frame(BoxTaskDtD)
-
-#Fix of one filepath
-BoxTaskPathLog
+BoxTaskSeen <- row.names(c("ID", "DtD1", "DtD2", "DtD3", "DtD4"))
 
 #Boxes and trials
 ## Norm
@@ -49,6 +47,12 @@ for (i in BoxTaskPathLog) {
   id <- paste(head(strsplit((strsplit(i, split ="_boxtaskreg/")[[1]][2]), split="")[[1]], n=3), collapse="")
   DtDPart <- cbind(id, DtD1, DtD2, DtD3, DtD4)
   BoxTaskDtD <- rbind(BoxTaskDtD, DtDPart)
+  DtD1Seen <- sum(as.numeric(NormCol[NormCol[,1] %in% seen[seen %in% NormCol[NormCol[,3]==1]],2]))
+  DtD2Seen <- sum(as.numeric(NormCol[NormCol[,1] %in% seen[seen %in% NormCol[NormCol[,3]==2]],2]))
+  DtD3Seen <- sum(as.numeric(NormCol[NormCol[,1] %in% seen[seen %in% NormCol[NormCol[,3]==3]],2]))
+  DtD4Seen <- sum(as.numeric(NormCol[NormCol[,1] %in% seen[seen %in% NormCol[NormCol[,3]==4]],2]))
+  DtDIBO <- cbind(id, DtD1Seen, DtD2Seen, DtD3Seen, DtD4Seen)
+  BoxTaskSeen <- rbind(BoxTaskSeen, DtDIBO)
 }
 
 #As numeric
@@ -56,14 +60,21 @@ BoxTaskDtD[,2] <- as.numeric(as.character(BoxTaskDtD[,2]))
 BoxTaskDtD[,3] <- as.numeric(as.character(BoxTaskDtD[,3]))
 BoxTaskDtD[,4] <- as.numeric(as.character(BoxTaskDtD[,4]))
 BoxTaskDtD[,5] <- as.numeric(as.character(BoxTaskDtD[,5]))
+BoxTaskSeen[,2] <- as.numeric(as.character(BoxTaskSeen[,2]))
+BoxTaskSeen[,3] <- as.numeric(as.character(BoxTaskSeen[,3]))
+BoxTaskSeen[,4] <- as.numeric(as.character(BoxTaskSeen[,4]))
+BoxTaskSeen[,5] <- as.numeric(as.character(BoxTaskSeen[,5]))
 
 #Removed completely failed runs (0 opened boxes)
+BoxTaskSeen <- BoxTaskSeen[(rowSums(BoxTaskDtD[,-1])!=0),]
 BoxTaskDtD <- BoxTaskDtD[(rowSums(BoxTaskDtD[,-1])!=0),]
 
 #Naming
 row.names(BoxTaskDtD) <- paste("X", BoxTaskDtD$id, sep = "")
 BoxNormTaskLog <- BoxTaskDtD[,-1]
 colnames(BoxNormTaskLog) <- c("BoxNormDtD1","BoxNormDtD2","BoxNormDtD3","BoxNormDtD4")
+row.names(BoxTaskSeen) <- paste("X", BoxTaskSeen[,1], sep="")
+BoxTaskSeen <- BoxTaskSeen[,-1]
 
 #Replace 0 with NA to avoid accidental summing without warning
 BoxNormTaskLog[BoxNormTaskLog == 0] <- NA
