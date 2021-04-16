@@ -162,7 +162,7 @@ NormCol1 <- cbind(NormCol1, sequence, Trial)
 ### Trial2
 sequence <- c(1,1,1,1,1,0,1,1,1,0,1,1,0,1,1)
 Trial <- rep(2,15)
-NormCol2 <- c("box",paste(rep("box_",14),seq(16,29,1),sep=""))
+NormCol2 <- c("box_a",paste(rep("box_",14),seq(16,29,1),sep=""))
 NormCol2 <- cbind(NormCol2, sequence, Trial)
 ### Trial3
 sequence <- c(1,0,1,1,0,1,0,1,0,1,1,0,0,1,1)
