@@ -20,7 +20,7 @@
 ### colour_sequences_12 (3 seqs), colour_sequences_6or9_a (3 seqs), colour_sequences_6or9_b (3 seqs)
 
 # Set up replacement data.frame
-IBO <- All[,c(7,10,13,16,19,22,25,28,31,34,37,40,43,46,47,48,49,52,53,54,55,57,62,67,72,77,82,87,92,97,102)]
+IBO <- All[,c(7,10,13,16,19,22,25,28,31,34,37,40,43,46,47,48,49,52,53,54,55,56,61,66,71,76,81,86,91,96,101)]
 for (i in 1:ncol(IBO)) {IBO[,i] <- as.numeric(as.character(IBO[,i]))}
 
 # Actual sequences Beads-tasks
