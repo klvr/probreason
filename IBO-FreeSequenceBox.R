@@ -63,13 +63,30 @@ IBO[!is.na(IBO[,14]),17] <- BoxIrregIBOCol[,12]
 
 #2018
 ## Norm
-## REMOVED - Original task-script cannot be trusted, and thus not the extraction either, must be fixed before used.
-#Temp removal:
-IBO <- IBO[,-c(18,19,20,21,22)]
-All <- All[,-c(50,51,52,53,54,55,56)]
+IBO <- merge(IBO, BoxTaskSeen, by = "row.names", all.x = TRUE, all.y = FALSE)
+row.names(IBO) <- IBO[,1]
+IBO <- IBO[,-1]
+for (i in 1:ncol(IBO)) {IBO[,i] <- as.numeric(as.character(IBO[,i]))}
+for (i in 1:nrow(IBO)) {
+  if(!is.na(IBO[i,18])) {
+    IBO[i,18] <- (dbinom(as.numeric(IBO[i,32]), as.numeric(IBO[i,18]), prob = 0.85) / (dbinom(as.numeric(IBO[i,32]), as.numeric(IBO[i,18]), prob = 0.85) + dbinom(as.numeric(IBO[i,32]), as.numeric(IBO[i,18]), prob = 0.15)) )
+  }
+  if(!is.na(IBO[i,19])) {
+    IBO[i,19] <- (dbinom(as.numeric(IBO[i,33]), as.numeric(IBO[i,19]), prob = 0.85) / (dbinom(as.numeric(IBO[i,33]), as.numeric(IBO[i,19]), prob = 0.85) + dbinom(as.numeric(IBO[i,33]), as.numeric(IBO[i,19]), prob = 0.15)) )
+  }
+  if(!is.na(IBO[i,20])) {
+    IBO[i,20] <- (dbinom(as.numeric(IBO[i,34]), as.numeric(IBO[i,20]), prob = 0.60) / (dbinom(as.numeric(IBO[i,34]), as.numeric(IBO[i,20]), prob = 0.60) + dbinom(as.numeric(IBO[i,34]), as.numeric(IBO[i,20]), prob = 0.40)) )
+  }
+  if(!is.na(IBO[i,21])) {
+    IBO[i,21] <- (dbinom(as.numeric(IBO[i,35]), as.numeric(IBO[i,21]), prob = 0.60) / (dbinom(as.numeric(IBO[i,35]), as.numeric(IBO[i,21]), prob = 0.60) + dbinom(as.numeric(IBO[i,35]), as.numeric(IBO[i,21]), prob = 0.40)) )
+  }
+}
+
+#Removing redundent data
+IBO <- IBO[,-c(22,32,33,34,35)]
 
 #Naming of cols for IBO
-colnames(IBO) <- c("BeadsOnejarIBO1","BeadsOnejarIBO2","BeadsOnejarIBO3","BeadsOnejarIBO4", "BeadsToneIBO1","BeadsToneIBO2","BeadsToneIBO3","BeadsToneIBO4", "BeadsTwojarIBO1","BeadsTwojarIBO2","BeadsTwojarIBO3","BeadsTwojarIBO4","BeadsTwojarIBO5", "BoxIrregIBO1","BoxIrregIBO2","BoxIrregIBO3","BoxIrregIBO4","BoxNormExtIBO2","BoxNormExtIBO3","BoxNormExtIBO4","BoxNormExtIBO5","BoxNormExtIBO6","BoxNormExtIBO7","BoxNormExtIBO8","BoxNormExtIBO9","BoxNormExtIBO10")
+colnames(IBO) <- c("BeadsOnejarIBO1","BeadsOnejarIBO2","BeadsOnejarIBO3","BeadsOnejarIBO4", "BeadsToneIBO1","BeadsToneIBO2","BeadsToneIBO3","BeadsToneIBO4", "BeadsTwojarIBO1","BeadsTwojarIBO2","BeadsTwojarIBO3","BeadsTwojarIBO4","BeadsTwojarIBO5", "BoxIrregIBO1","BoxIrregIBO2","BoxIrregIBO3","BoxIrregIBO4", "BoxNormIBO1","BoxNormIBO2","BoxNormIBO3","BoxNormIBO4","BoxNormExtIBO2","BoxNormExtIBO3","BoxNormExtIBO4","BoxNormExtIBO5","BoxNormExtIBO6","BoxNormExtIBO7","BoxNormExtIBO8","BoxNormExtIBO9","BoxNormExtIBO10")
 
 #Direction of IBO's. Always in favor of the (current) majority
 lengde <- nrow(IBO)
