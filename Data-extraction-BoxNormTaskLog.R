@@ -39,6 +39,7 @@ for (i in BoxTaskPathLog) {
   test <- test[grep("Keypress:*", test$press)[[1]]:nrow(test),]
   seen <- as.character(test[grep("Mouse:  Left button up*",test$press)-1,3][grepl("box_*",as.character(test[grep("Mouse:  Left button up*",test$press)-1,3]))]) #Boxes seen
   seen <- gsub(":.*", "", seen)
+  seen <- unique(seen)
   if(sum(seen=="box")==1) {seen[seen=="box"] <- "box_a"}
   DtD1 <- sum(seen %in% NormCol[NormCol[,3]==1,1])
   DtD2 <- sum(seen %in% NormCol[NormCol[,3]==2,1])
