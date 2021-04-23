@@ -36,9 +36,8 @@ for (i in BoxTaskPathLog) {
   test <- read.delim(i)
   colnames(test) <- c("time","EXP" ,"press")
   test$EXP <- as.character(test$EXP)
-  test <- test[grep("Keypress:*", test$press)[[1]]:nrow(test),]
-  seen <- as.character(test[grep("Mouse:  Left button up*",test$press)-1,3][grepl("box_*",as.character(test[grep("Mouse:  Left button up*",test$press)-1,3]))]) #Boxes seen
-  if (length(seen)==0) {seen <- as.character(test[grep("Mouse:  Right button up*",test$press)-1,3][grepl("box_*",as.character(test[grep("Mouse:  Right button up*",test$press)-1,3]))])}
+  test <- test[grep("box_1: autoDraw = True*", test$press)[[1]]:nrow(test),]
+  seen <- c(as.character(test[grep("Mouse:  Left button up*",test$press)-1,3][grepl("box_*",as.character(test[grep("Mouse:  Left button up*",test$press)-1,3]))]),as.character(test[grep("Mouse:  Right button up*",test$press)-1,3][grepl("box_*",as.character(test[grep("Mouse:  Right button up*",test$press)-1,3]))])) #Boxes seen
   seen <- gsub(":.*", "", seen)
   seen <- unique(seen)
   if(sum(seen=="box")==1) {seen[seen=="box"] <- "box_a"}
