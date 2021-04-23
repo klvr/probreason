@@ -36,10 +36,10 @@ BoxIrregIBO <- BoxIrregIBO[!is.na(BoxIrregIBO$BoxIrregIBODtD1),]
 BoxIrregIBORow <- as.numeric()
 BoxIrregIBOCol <- as.numeric()
 for (i in 1:nrow(test)){
-  Trial1 <- test[i,7][[1]][1:test[i,1]]
-  Trial2 <- test[i, 7][[1]][(1+test[i,1]):(test[i,1]+test[i,2])]
-  Trial3 <- test[i, 7][[1]][(1+test[i,1]+test[i,2]):(test[i,1]+test[i,2]+test[i,3])]
-  Trial4 <- test[i, 7][[1]][(1+test[i,1]+test[i,2]+test[i,3]):(test[i,1]+test[i,2]+test[i,3]+test[i,4])]
+  Trial1 <- unique(test[i,7][[1]][1:test[i,1]])
+  Trial2 <- unique(test[i, 7][[1]][(1+test[i,1]):(test[i,1]+test[i,2])])
+  Trial3 <- unique(test[i, 7][[1]][(1+test[i,1]+test[i,2]):(test[i,1]+test[i,2]+test[i,3])])
+  Trial4 <- unique(test[i, 7][[1]][(1+test[i,1]+test[i,2]+test[i,3]):(test[i,1]+test[i,2]+test[i,3]+test[i,4])])
   Trial1 <- IrregCol[IrregCol[,1] %in% Trial1 ==TRUE,2]
   Trial2 <- IrregCol[IrregCol[,1] %in% Trial2 ==TRUE,2]
   Trial3 <- IrregCol[IrregCol[,1] %in% Trial3 ==TRUE,2]
@@ -56,10 +56,6 @@ for (i in 1:nrow(test)){
   BoxIrregIBOCol <- rbind(BoxIrregIBOCol, BoxIrregIBORow)
 }
 colnames(BoxIrregIBOCol) <- c("BoxIrregDtD1","BoxIrregDtD2","BoxIrregDtD3","BoxIrregDtD4","BoxIrregOneColObs1", "BoxIrregOneColObs2", "BoxIrregOneColObs3", "BoxIrregOneColObs4", "BoxIrregIBO1","BoxIrregIBO2","BoxIrregIBO3","BoxIrregIBO4") 
-IBO[!is.na(IBO[,14]),14] <- BoxIrregIBOCol[,9]
-IBO[!is.na(IBO[,14]),15] <- BoxIrregIBOCol[,10]
-IBO[!is.na(IBO[,14]),16] <- BoxIrregIBOCol[,11]
-IBO[!is.na(IBO[,14]),17] <- BoxIrregIBOCol[,12]
 
 ##Load all potential sequences for 8515
 Seq8515 <- read.csv('0.85_0.15_Sequences.csv')
@@ -194,6 +190,115 @@ for (i in 1:nrow(IBO)) {
 }
 
 ##Irreg
+for (i in 1:ncol(BoxIrregIBOCol)) {BoxIrregIBOCol[,i] <- as.numeric(as.character(BoxIrregIBOCol[,i]))}
+
+for (i in 1:nrow(BoxIrregIBOCol)) {
+  if(is.na(BoxIrregIBOCol[i,1]) + is.na(BoxIrregIBOCol[i,5]) == 0){
+    if(BoxIrregIBOCol[i,5] == 0){Seq2 <- NULL} else {Seq2 <- rep(1, times = BoxIrregIBOCol[i,5])}
+    if(BoxIrregIBOCol[i,1] == 0){Seq1 <- NULL} else {Seq1 <- rep(0, times = (BoxIrregIBOCol[i,1]-length(Seq2)))}
+    ExSeq <- c(Seq1,Seq2)
+    ExSeqR <- (ExSeq*-1)+1
+    ExSeq <- as.data.frame(rbind(ExSeq))
+    ExSeqR <- as.data.frame(rbind(ExSeqR))
+    RedSeq <- Seq8515[,1:(length(ExSeq))]
+    Stop1 <- mean(Seq8515[,1])
+    if (BoxIrregIBOCol[i,5]==3){BoxIrregIBOCol[i,1] <- 1} else {
+      if (ncol(ExSeq)==1) {BoxIrregIBOCol[i,1] <- Stop1} else {
+        sum <- NULL
+        sumR <- NULL
+        for (x in 1:nrow(Seq8515)) {
+          tf <- rowSums(ExSeq == RedSeq[x,])==length(ExSeq)
+          sum <- c(sum,tf)
+          tfR <- rowSums(ExSeqR == RedSeq[x,])==length(ExSeqR)
+          sumR <- c(sumR, tfR)
+        }
+        sum <- sum(sum)
+        sumR <- sum(sumR)
+        if (sum > sumR) {BoxIrregIBOCol[i,1] <- sum/(sum+sumR)} else {BoxIrregIBOCol[i,1] <- sumR/(sum+sumR)}
+      }
+    }
+  }
+  if(is.na(BoxIrregIBOCol[i,2]) + is.na(BoxIrregIBOCol[i,6]) == 0){
+    if(BoxIrregIBOCol[i,6] == 0){Seq2 <- NULL} else {Seq2 <- rep(1, times = BoxIrregIBOCol[i,6])}
+    if(BoxIrregIBOCol[i,2] == BoxIrregIBOCol[i,6]){Seq1 <- NULL} else {Seq1 <- rep(0, times = (BoxIrregIBOCol[i,2]-length(Seq2)))}
+    ExSeq <- c(Seq1,Seq2)
+    ExSeqR <- (ExSeq*-1)+1
+    ExSeq <- as.data.frame(rbind(ExSeq))
+    ExSeqR <- as.data.frame(rbind(ExSeqR))
+    RedSeq <- Seq8515[,1:(length(ExSeq))]
+    Stop1 <- mean(Seq8515[,1])
+    if (length(Seq1)==3){BoxIrregIBOCol[i,2] <- 1} else {
+      if (ncol(ExSeq)==1) {BoxIrregIBOCol[i,2] <- Stop1} else {
+        sum <- NULL
+        sumR <- NULL
+        for (x in 1:nrow(Seq8515)) {
+          tf <- rowSums(ExSeq == RedSeq[x,])==length(ExSeq)
+          sum <- c(sum,tf)
+          tfR <- rowSums(ExSeqR == RedSeq[x,])==length(ExSeqR)
+          sumR <- c(sumR, tfR)
+        }
+        sum <- sum(sum)
+        sumR <- sum(sumR)
+        if (sum > sumR) {BoxIrregIBOCol[i,2] <- sum/(sum+sumR)} else {BoxIrregIBOCol[i,2] <- sumR/(sum+sumR)}
+      }
+    }
+  }
+  if(is.na(BoxIrregIBOCol[i,3]) + is.na(BoxIrregIBOCol[i,7]) == 0){
+    if(BoxIrregIBOCol[i,7] == 0){Seq2 <- NULL} else {Seq2 <- rep(1, times = BoxIrregIBOCol[i,7])}
+    if(BoxIrregIBOCol[i,3] == 0){Seq1 <- NULL} else {Seq1 <- rep(0, times = (BoxIrregIBOCol[i,3]-length(Seq2)))}
+    ExSeq <- c(Seq1,Seq2)
+    ExSeqR <- (ExSeq*-1)+1
+    ExSeq <- as.data.frame(rbind(ExSeq))
+    ExSeqR <- as.data.frame(rbind(ExSeqR))
+    RedSeq <- Seq6040[,1:(length(ExSeq))]
+    Stop1 <- mean(Seq6040[,1])
+    if (BoxIrregIBOCol[i,7]==9){BoxIrregIBOCol[i,3] <- 1} else {
+      if (ncol(ExSeq)==1) {BoxIrregIBOCol[i,3] <- Stop1} else {
+        sum <- NULL
+        sumR <- NULL
+        for (x in 1:nrow(Seq6040)) {
+          tf <- rowSums(ExSeq == RedSeq[x,])==length(ExSeq)
+          sum <- c(sum,tf)
+          tfR <- rowSums(ExSeqR == RedSeq[x,])==length(ExSeqR)
+          sumR <- c(sumR, tfR)
+        }
+        sum <- sum(sum)
+        sumR <- sum(sumR)
+        if (sum > sumR) {BoxIrregIBOCol[i,3] <- sum/(sum+sumR)} else {BoxIrregIBOCol[i,3] <- sumR/(sum+sumR)}
+      }
+    }
+  }
+  if(is.na(BoxIrregIBOCol[i,4]) + is.na(BoxIrregIBOCol[i,8]) == 0){
+    if(BoxIrregIBOCol[i,8] == 0){Seq2 <- NULL} else {Seq2 <- rep(1, times = BoxIrregIBOCol[i,8])}
+    if(BoxIrregIBOCol[i,4] == BoxIrregIBOCol[i,8]){Seq1 <- NULL} else {Seq1 <- rep(0, times = (BoxIrregIBOCol[i,4]-length(Seq2)))}
+    ExSeq <- c(Seq1,Seq2)
+    ExSeqR <- (ExSeq*-1)+1
+    ExSeq <- as.data.frame(rbind(ExSeq))
+    ExSeqR <- as.data.frame(rbind(ExSeqR))
+    RedSeq <- Seq6040[,1:(length(ExSeq))]
+    Stop1 <- mean(Seq6040[,1])
+    if (length(Seq1)==10){BoxIrregIBOCol[i,4] <- 1} else {
+      if (ncol(ExSeq)==1) {BoxIrregIBOCol[i,4] <- Stop1} else {
+        sum <- NULL
+        sumR <- NULL
+        for (x in 1:nrow(Seq6040)) {
+          tf <- rowSums(ExSeq == RedSeq[x,])==length(ExSeq)
+          sum <- c(sum,tf)
+          tfR <- rowSums(ExSeqR == RedSeq[x,])==length(ExSeqR)
+          sumR <- c(sumR, tfR)
+        }
+        sum <- sum(sum)
+        sumR <- sum(sumR)
+        if (sum > sumR) {BoxIrregIBOCol[i,4] <- sum/(sum+sumR)} else {BoxIrregIBOCol[i,4] <- sumR/(sum+sumR)}
+      }
+    }
+  }
+}
+
+IBO[!is.na(IBO[,14]),14] <- BoxIrregIBOCol[,1]
+IBO[!is.na(IBO[,14]),15] <- BoxIrregIBOCol[,2]
+IBO[!is.na(IBO[,14]),16] <- BoxIrregIBOCol[,3]
+IBO[!is.na(IBO[,14]),17] <- BoxIrregIBOCol[,4]
 
 
 #Removing redundent data
