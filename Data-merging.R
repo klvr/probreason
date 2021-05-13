@@ -28,3 +28,12 @@ All <- All[,-1]
 All <- merge(All, Cape, by = "row.names", all.x = TRUE, all.y = FALSE)
 row.names(All) <- All[,1]
 All <- All[,-1]
+
+All <- merge(All, NFCC, by = "row.names", all.x = TRUE, all.y = FALSE)
+row.names(All) <- All[,1]
+All <- All[,-1]
+
+All <- merge(All, FDim, by = "row.names", all.x = TRUE, all.y = FALSE)
+row.names(All) <- All[,1]
+All <- All[,-1]
+All <- All[,-109]
