@@ -15,6 +15,10 @@ BoxTask8 <- BoxTask
 BoxTask10 <- BoxTask
 BoxTask11 <- BoxTask
 BoxTask12 <- BoxTask
+NFCC <- row.names(c("ID", "NFCC"))
+NFCC <- as.data.frame(NFCC)
+FDim <- row.names(c("ID", "FDTot", "FDJoy", "FDDep", "FDStress", "FDSocial", "FDThrill"))
+FDim <- as.data.frame(FDim)
 
 #Extract from xlsx-files
 for (i in path) {
@@ -121,6 +125,21 @@ for (i in path) {
   ID <- sub(".*?ID_(.*?).xlsx.*", "\\1", i)
   Run <- cbind(ID, lengde, tidperbox, vartidperbox, valg, probest)
   BoxTask12 <- rbind(BoxTask12,Run)
+  #NFCC
+  ID <- sub(".*?ID_(.*?).xlsx.*", "\\1", i)
+  NFCCSum <- sum((read.xlsx(pathspes, sheet=5))[,3])
+  NFCCSum <- cbind(ID, NFCCSum)
+  NFCC <- rbind(NFCC, NFCCSum)
+  #FiveD
+  ID <- sub(".*?ID_(.*?).xlsx.*", "\\1", i)
+  FDJoy <- sum((read.xlsx(pathspes, sheet=9))[1:5,3])
+  FDDep <- sum((read.xlsx(pathspes, sheet=9))[6:10,3])
+  FDStress <- sum(8 - (read.xlsx(pathspes, sheet=9))[11:15,3])
+  FDSocial <- sum((read.xlsx(pathspes, sheet=9))[16:20,3])
+  FDThrill <- sum((read.xlsx(pathspes, sheet=9))[21:25,3])
+  FDTot <- sum(FDJoy, FDDep,FDStress, FDSocial, FDThrill)
+  FDAll <- cbind(ID, FDTot, FDJoy, FDDep, FDStress, FDSocial,FDThrill)
+  FDim <- rbind(FDim, FDAll)
 })
 }
 
@@ -221,4 +240,40 @@ for (i in seq){if(BoxNormTaskXlsx[i,49]=="Light Yellow"){BoxNormTaskXlsx[i,49] <
 
 write.csv(BoxNormTaskXlsx, paste(getwd(), "/Cleaned data/BoxNormTaskXlsx.csv", sep =""))
 
-rm(BoxTask, BoxTask1, BoxTask2, BoxTask3, BoxTask4, BoxTask6, BoxTask7, BoxTask8, BoxTask10, BoxTask11, BoxTask12, Run, i, ID, lengde, names, names2, path, pathspes, probest, tidperbox, valg, vartidperbox, BoxTaskPathXlsx)
+FDim[,1] <- as.character(FDim[,1])
+FDim[,2] <- as.numeric(as.character(FDim[,2]))
+FDim[,3] <- as.numeric(as.character(FDim[,3]))
+FDim[,4] <- as.numeric(as.character(FDim[,4]))
+FDim[,5] <- as.numeric(as.character(FDim[,5]))
+FDim[,6] <- as.numeric(as.character(FDim[,6]))
+FDim[,7] <- as.numeric(as.character(FDim[,7]))
+FDim[1,1] <- "EN3HN11" #see "Manual-ID-fix.R"
+FDim[2,1] <- "X4621"
+FDim[3,1] <- "X7743"
+FDim[15,1] <- "EN04IR22"
+FDim[32,1] <- "EN06IR08"
+FDim[52,1] <- "MA06HA94"
+FDim[47,1] <- "kroase"
+FDim[58,1] <- "NE05EL22"
+#Manual fixes
+FDim <- FDim[-45,] #remove duplicate
+row.names(FDim) <- FDim[,1]
+FDim <- FDim[,-1]
+write.csv(FDim, paste(getwd(), "/Cleaned data/FiveDimensions.csv", sep =""))
+
+NFCC[,1] <- as.character(NFCC[,1])
+NFCC[,2] <- as.numeric(as.character(NFCC[,2]))
+NFCC[1,1] <- "EN3HN11" #see "Manual-ID-fix.R"
+NFCC[2,1] <- "X4621"
+NFCC[3,1] <- "X7743"
+NFCC[15,1] <- "EN04IR22"
+NFCC[32,1] <- "EN06IR08"
+NFCC[52,1] <- "MA06HA94"
+NFCC[47,1] <- "kroase"
+NFCC[58,1] <- "NE05EL22"
+#Manual fixes
+NFCC <- NFCC[-45,] #remove duplicate
+row.names(NFCC) <- NFCC[,1]
+write.csv(NFCC, paste(getwd(), "/Cleaned data/NFCC.csv", sep =""))
+
+rm(BoxTask, BoxTask1, BoxTask2, BoxTask3, BoxTask4, BoxTask6, BoxTask7, BoxTask8, BoxTask10, BoxTask11, BoxTask12, Run, i, ID, lengde, names, names2, path, pathspes, probest, tidperbox, valg, vartidperbox, BoxTaskPathXlsx, FDAll, NFCCSum, FDDep, FDJoy, FDSocial, FDStress, FDThrill, FDTot, probestcol, seq, x)
