@@ -51,8 +51,10 @@
 #### To-do:
 - Exclusion according to prereg criteria, and flagging.
 - Add analysis scripts to GitHub.
-- Add link to OSF and vice versa
+- Add link to OSF and vice versa.
 - Clean up project for easier overview for reviewers and interested readers.
+- Clean up, and add cleaned data to OSF.
+- Add Debrief "analyses" to OSF.
 
 #### _Could_ be improved / collected:
 - Extract decisions for all Beads and Box tasks.
