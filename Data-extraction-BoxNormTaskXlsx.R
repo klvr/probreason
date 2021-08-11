@@ -128,7 +128,12 @@ for (i in path) {
   #NFCC
   ID <- sub(".*?ID_(.*?).xlsx.*", "\\1", i)
   NFCCSum <- sum((read.xlsx(pathspes, sheet=5))[,3])
-  NFCCSum <- cbind(ID, NFCCSum)
+  NFCCOrder <- sum((read.xlsx(pathspes, sheet=5))[c(3,12,13),3])
+  NFCCPred <- sum((read.xlsx(pathspes, sheet=5))[c(6,10,15),3])
+  NFCCDec <- sum((read.xlsx(pathspes, sheet=5))[c(7,8,9),3])
+  NFCCAmb <- sum((read.xlsx(pathspes, sheet=5))[c(1,4,11),3])
+  NFCCClose <- sum((read.xlsx(pathspes, sheet=5))[c(2,5,14),3])
+  NFCCSum <- cbind(ID, NFCCSum, NFCCOrder, NFCCPred, NFCCDec, NFCCAmb,NFCCClose)
   NFCC <- rbind(NFCC, NFCCSum)
   #FiveD
   ID <- sub(".*?ID_(.*?).xlsx.*", "\\1", i)
@@ -263,6 +268,11 @@ write.csv(FDim, paste(getwd(), "/Cleaned data/FiveDimensions.csv", sep =""))
 
 NFCC[,1] <- as.character(NFCC[,1])
 NFCC[,2] <- as.numeric(as.character(NFCC[,2]))
+NFCC[,3] <- as.numeric(as.character(NFCC[,3]))
+NFCC[,4] <- as.numeric(as.character(NFCC[,4]))
+NFCC[,5] <- as.numeric(as.character(NFCC[,5]))
+NFCC[,6] <- as.numeric(as.character(NFCC[,6]))
+NFCC[,7] <- as.numeric(as.character(NFCC[,7]))
 NFCC[1,1] <- "EN3HN11" #see "Manual-ID-fix.R"
 NFCC[2,1] <- "X4621"
 NFCC[3,1] <- "X7743"
@@ -274,6 +284,7 @@ NFCC[58,1] <- "NE05EL22"
 #Manual fixes
 NFCC <- NFCC[-45,] #remove duplicate
 row.names(NFCC) <- NFCC[,1]
+NFCC <- NFCC[,-1]
 write.csv(NFCC, paste(getwd(), "/Cleaned data/NFCC.csv", sep =""))
 
 rm(BoxTask, BoxTask1, BoxTask2, BoxTask3, BoxTask4, BoxTask6, BoxTask7, BoxTask8, BoxTask10, BoxTask11, BoxTask12, Run, i, ID, lengde, names, names2, path, pathspes, probest, tidperbox, valg, vartidperbox, BoxTaskPathXlsx, FDAll, NFCCSum, FDDep, FDJoy, FDSocial, FDStress, FDThrill, FDTot, probestcol, seq, x)
