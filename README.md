@@ -53,8 +53,173 @@ I.e., from raw data (as outputted by the materials used) to cleaned data, and to
 -   Analyses/: Random files saved relating to analyses.
 -   Article/: All files relating to the final article.
 
+## Project structure:
+
+    project/
+    │   README.md                     - ReadMe file
+    │   Probabilistic Reasoning.Rproj - RProject file
+    |   renv.lock                     - File for recreating local R environment
+    │
+    └───data/ - Real data not pushed to GitHub
+    │   │
+    │   └───processed/ - All processed data files from scripts are saved here
+    │   │   Happens automatically when running scripts. This section will not be updated
+    │   │
+    │   └───raw/ - All raw output files from the experiments. Treated as read-only
+    │   │   │
+    │   │   └───2018/ - All raw output files from 2018 (experiment 1)
+    │   │   │   │
+    │   │   │   └───raw_data_lsy/ - Collected by experimenter 'lsy'
+    │   │   │   │   │ 
+    │   │   │   │   └───301/ - Data from participant '301'
+    │   │   │   │   :   │
+    │   │   │   │   :   └───301_ambiguity/    - ART data
+    │   │   │   │   :   │   ID_ambiguity_1806lt_YEAR_Month_Date_*.csv
+    │   │   │   │   :   │   ID_ambiguity_1806lt_YEAR_Month_Date_*trials_2.csv
+    │   │   │   │   :   │   ID_ambiguity_1806lt_YEAR_Month_Date_*trials_3.csv
+    │   │   │   │   :   │   ID_ambiguity_1806lt_YEAR_Month_Date_*trials.csv
+    │   │   │   │   :   │   ID_ambiguity_1806lt_YEAR_Month_Date_*.xlsx
+    │   │   │   │   :   │   ID_ambiguity_1806lt_YEAR_Month_Date_*.psydat
+    │   │   │   │   :   │   ID_ambiguity_1806lt_YEAR_Month_Date_*.log
+    │   │   │   │   :   │
+    │   │   │   │   :   └───301_boxtaskirreg/ - Box Irreg data
+    │   │   │   │   :   │   ID_irregbox_task_norm_LANG_YEAR_Month_Date_*.csv
+    │   │   │   │   :   │   ID_irregbox_task_norm_LANG_YEAR_Month_Date_*.psydat
+    │   │   │   │   :   │   ID_irregbox_task_norm_LANG_YEAR_Month_Date_*.log
+    │   │   │   │   :   │
+    │   │   │   │   :   └───301_boxtaskreg/   - Box Norm data
+    │   │   │   │   :   │   ID_box_task_YEAR_Month_Date_*.csv
+    │   │   │   │   :   │   ID_box_task_YEAR_Month_Date_*.psydat
+    │   │   │   │   :   │   ID_box_task_YEAR_Month_Date_*.log
+    │   │   │   │   :   │
+    │   │   │   │   :   └───301_cape/         - CAPE data
+    │   │   │   │   :   │   ID_Cape-42_YEAR_Month_Date_*.csv
+    │   │   │   │   :   │   ID_Cape-42_YEAR_Month_Date_*CAPE_p.csv
+    │   │   │   │   :   │   ID_Cape-42_YEAR_Month_Date_*.xlsx
+    │   │   │   │   :   │   ID_Cape-42_YEAR_Month_Date_*.psydat
+    │   │   │   │   :   │
+    │   │   │   │   :   └───301_DtDbeads/     - Beads two-urn data
+    │   │   │   │   :   │   ID_beads_task_DtD_norm_LANG_wb1_YEAR_Month_Date_*.csv
+    │   │   │   │   :   │   ID_beads_task_DtD_norm_LANG_wb1_YEAR_Month_Date_*trials_2.csv
+    │   │   │   │   :   │   ID_beads_task_DtD_norm_LANG_wb1_YEAR_Month_Date_*trials_3.csv
+    │   │   │   │   :   │   ID_beads_task_DtD_norm_LANG_wb1_YEAR_Month_Date_*trials_4.csv
+    │   │   │   │   :   │   ID_beads_task_DtD_norm_LANG_wb1_YEAR_Month_Date_*trials_5.csv
+    │   │   │   │   :   │   ID_beads_task_DtD_norm_LANG_wb1_YEAR_Month_Date_*trials.csv
+    │   │   │   │   :   │   ID_beads_task_DtD_norm_LANG_wb1_YEAR_Month_Date_*.xlsx
+    │   │   │   │   :   │   ID_beads_task_DtD_norm_LANG_wb1_YEAR_Month_Date_*.psydat
+    │   │   │   │   :   │   ID_beads_task_DtD_norm_LANG_wb1_YEAR_Month_Date_*.log
+    │   │   │   │   :   │
+    │   │   │   │   :   └───301_notes/        - Debrief + misc
+    │   │   │   │   :   │   post_session_questionnaire_ID.docx
+    │   │   │   │   :   │
+    │   │   │   │   :   └───301_onejar/       - Beads one-urn data
+    │   │   │   │   :   │   ID_onejar_beads_norm_LANG_YEAR_Month_Date_*.csv
+    │   │   │   │   :   │   ID_onejar_beads_norm_LANG_YEAR_Month_Date_*trials_2.csv
+    │   │   │   │   :   │   ID_onejar_beads_norm_LANG_YEAR_Month_Date_*trials_3.csv
+    │   │   │   │   :   │   ID_onejar_beads_norm_LANG_YEAR_Month_Date_*trials_4.csv
+    │   │   │   │   :   │   ID_onejar_beads_norm_LANG_YEAR_Month_Date_*trials.csv
+    │   │   │   │   :   │   ID_onejar_beads_norm_LANG_YEAR_Month_Date_*.xlsx
+    │   │   │   │   :   │   ID_onejar_beads_norm_LANG_YEAR_Month_Date_*.psydat
+    │   │   │   │   :   │   ID_onejar_beads_norm_LANG_YEAR_Month_Date_*.log
+    │   │   │   │   :   │
+    │   │   │   │   :   └───301_tone/         - Beads auditory data
+    │   │   │   │   :       ID_tone_task_YEAR_Month_Date_*.csv
+    │   │   │   │   :       ID_tone_task_YEAR_Month_Date_*trials_2.csv
+    │   │   │   │   :       ID_tone_task_YEAR_Month_Date_*trials_3.csv
+    │   │   │   │   :       ID_tone_task_YEAR_Month_Date_*trials_4.csv
+    │   │   │   │   :       ID_tone_task_YEAR_Month_Date_*trials.csv
+    │   │   │   │   :       ID_tone_task_YEAR_Month_Date_*.xlsx
+    │   │   │   │   :       ID_tone_task_YEAR_Month_Date_*.psydat
+    │   │   │   │   :       ID_tone_task_YEAR_Month_Date_*.log
+    │   │   │   │   :
+    │   │   │   │   └───ID/ - Data from participant ID
+    │   │   │   │   Participants 301-326
+    │   │   │   │
+    │   │   │   └───raw_data_lt/ - Collected by experimenter 'lt'
+    │   │   │   │   Pariticpants 001-022
+    │   │   │   │
+    │   │   │   └───raw_data_wnh/ - Collected by experimenter 'wnh'
+    │   │   │       Pariticpants 101-123
+    │   │   │
+    │   │   └───2020/ All raw output files from 2020 (experiment 2)
+    |   |       |
+    |   |       └───Ambiguity+Effort/ - ART data
+    |   |       |   ID_EAmbiguity_YEAR_Month_Date_*.csv
+    |   |       |   ID_AmbiguityE_YEAR_Month_Date_*.csv
+    |   |       :
+    |   |       |   ID_EAmbiguity_YEAR_Month_Date_*.psydat
+    |   |       |   ID_AmbiguityE_YEAR_Month_Date_*.psydat
+    |   |       :
+    |   |       |   ID_AmbiguityE_YEAR_Month_Date_*.log
+    |   |       |   ID_AmbiguityE_YEAR_Month_Date_*.log
+    |   |       :
+    |   |       └───beads DtD task/   - Beads two-urn data
+    |   |       |   ID_beads_task_DtD_v2020_YEAR_Month_Date_*.csv
+    |   |       |   ID_beads_task_DtD_v2020_YEAR_Month_Date_*trials_2.csv
+    |   |       |   ID_beads_task_DtD_v2020_YEAR_Month_Date_*trials_3.csv
+    |   |       |   ID_beads_task_DtD_v2020_YEAR_Month_Date_*trials_4.csv
+    |   |       |   ID_beads_task_DtD_v2020_YEAR_Month_Date_*trials_5.csv
+    |   |       |   ID_beads_task_DtD_v2020_YEAR_Month_Date_*trials.csv
+    |   |       |   ID_beads_task_DtD_v2020_YEAR_Month_Date_*.xlsx
+    |   |       |   ID_beads_task_DtD_v2020_YEAR_Month_Date_*.psydat
+    |   |       |   ID_beads_task_DtD_v2020_YEAR_Month_Date_*.log
+    |   |       :
+    |   |       └───BoxTask/          - Box Norm Ext, NfCC, FiveD, & CAPE data
+    |   |       |   ID_ID.xlsx
+    |   |       :
+    |   |       └───CAPE-P/           - CAPE data
+    |   |       |   ID_language_expCAPE_loop_1.csv
+    |   |       |   ID_language_expCAPE_loop_2.csv
+    |   |       :
+    |   |       music_data.csv        - CAPE data collected in other session
+    |   |
+    │   └───temp/ - Temporary files from scripts.
+    │       Happens automatically when running scripts. This section will not be updated
+    |   
+    └───data_dummy/ - Identical file-structure and nameing conventions as the real data
+    │
+    └───materials/ - Task files for adminisering the tasks and self-reports
+    |   |        NB: We are not the original creators of these, please refer to the
+    |   |        original authors as cited in the article
+    |   |
+    |   └───2018/ - All files needed to run the tasks in experiment 1
+    |   |   |
+    |   |   └───Ambiguity/ - All files needed to run the ART    
+    |   |   |
+    |   |   └───Beads/ - All files needed to run the Beads tasks
+    |   |   |
+    |   |   └───Box/ - All files needed to run the Box tasks
+    |   |   |
+    |   |   └───CAPE/ - All files needed to adminster the CAPE
+    |   |
+    |   └───2020/ - All files needed to run the tasks in experiment 2
+    |       |
+    |       └───Ambiguity/ - All files needed to run the ART    
+    |       |
+    |       └───Beads/ - All files needed to run the Beads task
+    |       |
+    |       └───Box+SelfRep/ - All files needed to run the Box Ext task
+    |                          Also administeres the NfCC, FiveD and CAPE
+    |
+    └───output/ - All output files (excluding pure processed data files).
+    │   Happens automatically when running scripts. This section will not be updated.
+    │
+    └───renv/ - Files used by 'renv.lock' to recreate local R-session used.
+    │
+    └───src/ - All script files (function, extraction, clearning, analyses and plots).
+    |          Run order in brackets:
+    |          1-4: Extraction & summarizing raw data (source-wise) - Outputs in 'data/*'
+    |          5:   Merging extracted data (across sources).        - Outputs in 'data/processed/'
+    |          6-X: Analyses of merged data (for each experiment).  - Outputs in 'output/*'
+    |          Y-Z: Plots to be used in the articles or otherwise.  - Outputs in 'output/*'
+    |    jatos_extraction.R      - Script for extracting and summarising Dice-task files.    [3]
+    |    merging_data.R          - Script for merging data across tasks.                     [5]
+    |    pavlovia_extraction.R   - Script for extracting and summarising Box-task files.     [4]
+    |    qualtrics_cleanup.R     - Script for cleaning up qualtrics files before extraction. [1]
+    |    qualtrics_extraction.R  - Script for extracting and summarising qualtrics files.    [2]
+
 #### To-do:
 
 -   Add analysis scripts to GitHub.
 -   Add link to OSF and vice versa.
-
+-   Update src/ folder structure
