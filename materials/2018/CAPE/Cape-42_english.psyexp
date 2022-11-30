@@ -1,0 +1,158 @@
+<?xml version="1.0" ?>
+<PsychoPy2experiment encoding="utf-8" version="1.90.2">
+  <Settings>
+    <Param name="Monitor" updates="None" val="testMonitor" valType="str"/>
+    <Param name="color" updates="None" val="$[-1,-1,-1]" valType="str"/>
+    <Param name="colorSpace" updates="None" val="rgb" valType="str"/>
+    <Param name="Experiment info" updates="None" val="{u'participant': u'', u'sex': u''}" valType="code"/>
+    <Param name="JS libs" updates="None" val="packaged" valType="str"/>
+    <Param name="Units" updates="None" val="use prefs" valType="str"/>
+    <Param name="Save excel file" updates="None" val="True" valType="bool"/>
+    <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
+    <Param name="Save psydat file" updates="None" val="True" valType="bool"/>
+    <Param name="Window size (pixels)" updates="None" val="[1920, 1080]" valType="code"/>
+    <Param name="Full-screen window" updates="None" val="True" valType="bool"/>
+    <Param name="blendMode" updates="None" val="avg" valType="str"/>
+    <Param name="Use version" updates="None" val="" valType="str"/>
+    <Param name="HTML path" updates="None" val="html" valType="str"/>
+    <Param name="Save csv file" updates="None" val="True" valType="bool"/>
+    <Param name="OSF Project ID" updates="None" val="" valType="str"/>
+    <Param name="Save log file" updates="None" val="False" valType="bool"/>
+    <Param name="Save wide csv file" updates="None" val="True" valType="bool"/>
+    <Param name="Show mouse" updates="None" val="False" valType="bool"/>
+    <Param name="Data filename" updates="None" val="u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])" valType="code"/>
+    <Param name="Show info dlg" updates="None" val="True" valType="bool"/>
+    <Param name="expName" updates="None" val="Cape-42_english" valType="str"/>
+    <Param name="logging level" updates="None" val="data" valType="code"/>
+    <Param name="Screen" updates="None" val="1" valType="num"/>
+  </Settings>
+  <Routines>
+    <Routine name="instrucs_CAPE">
+      <TextComponent name="instrucsCAPE">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="None" val="instrucsCAPE" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="text" updates="constant" val="This questionnaire is designed to measure unusual emotions, ideas, and mental experiences. We believe that these are much more common than previously thought and that most people have had such experiences at some point in their lives.&amp;#10;There are no right or wrong answers. It is your honest views and opinions we are interested in. Do not deliberate too long before answering each question – if in doubt the first instinct is often the best answer.&amp;#10;The answer key is as follows:&amp;#10;Never (1)&amp;#10;Sometimes (2)&amp;#10;Often (3)&amp;#10;Almost always (4)&amp;#10;Press SPACE when you are ready to begin.&amp;#10;" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="key_resp_2">
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_2" valType="code"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="takk">
+      <TextComponent name="takking">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="None" val="takking" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="text" updates="constant" val="You have finished all questions.&amp;#10;Thanks for taking part!" valType="str"/>
+        <Param name="stopVal" updates="constant" val="3.0" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="CAPE_P">
+      <TextComponent name="CAPE42">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="None" val="CAPE42" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="text" updates="set every repeat" val="$Survey_items" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.04" valType="code"/>
+      </TextComponent>
+      <RatingScaleComponent name="rating_2">
+        <Param name="labels" updates="constant" val="" valType="str"/>
+        <Param name="pos" updates="constant" val="0, -0.4" valType="str"/>
+        <Param name="high" updates="constant" val="4" valType="code"/>
+        <Param name="storeRating" updates="constant" val="True" valType="bool"/>
+        <Param name="marker" updates="constant" val="triangle" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="markerStart" updates="constant" val="3" valType="str"/>
+        <Param name="disappear" updates="constant" val="False" valType="bool"/>
+        <Param name="size" updates="constant" val="0.5" valType="code"/>
+        <Param name="tickHeight" updates="constant" val="" valType="str"/>
+        <Param name="showAccept" updates="constant" val="True" valType="bool"/>
+        <Param name="storeRatingTime" updates="constant" val="True" valType="bool"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="low" updates="constant" val="1" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="visualAnalogScale" updates="constant" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="stopType" updates="None" val="condition" valType="str"/>
+        <Param name="scaleDescription" updates="constant" val="&quot;Never&quot; &quot;Sometimes&quot; &quot;Often&quot; &quot;Nearly always&quot;" valType="str"/>
+        <Param name="storeHistory" updates="constant" val="False" valType="bool"/>
+        <Param name="categoryChoices" updates="constant" val="" valType="str"/>
+        <Param name="customize_everything" updates="constant" val="marker='triangle', size=0.5, pos=[0.0, -0.4], low=1, high=4, labels=['aldri','iblant','ofte','nesten alltid'], scale = '1 = Never, 2 = Sometimes, 3 = Often, 4 = Almost always', markerStart='3',stretch = 2.5" valType="str"/>
+        <Param name="name" updates="None" val="rating_2" valType="code"/>
+        <Param name="singleClick" updates="constant" val="False" valType="bool"/>
+      </RatingScaleComponent>
+    </Routine>
+  </Routines>
+  <Flow>
+    <Routine name="instrucs_CAPE"/>
+    <LoopInitiator loopType="TrialHandler" name="CAPE_p">
+      <Param name="conditionsFile" updates="None" val="CAPE42English.xlsx" valType="str"/>
+      <Param name="name" updates="None" val="CAPE_p" valType="code"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+      <Param name="loopType" updates="None" val="sequential" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="code"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="conditions" updates="None" val="[{'Survey_items': u'Do you ever feel sad?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you ever feel as if people seem to drop hints about you or say things with a double meaning?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you ever feel that you are not a very animated person?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you ever feel that you are not much of a talker when you are conversing with other people?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you ever feel as if things in magazines or on TV were written especially for you?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you ever feel as if some people are not what they seem to be?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you ever feel as if you are being persecuted in some way?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you ever feel that you experience few or no emotions at important events?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you ever feel pessimistic about everything?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you ever feel as if there is a conspiracy against you?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you ever see tiny items, such as white mice?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you ever feel as if you are destined to be someone very important?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you ever feel as if there is no future for you?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you ever feel that you are a very special or unusual person?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you ever feel as if you do not want to live anymore?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you ever think that people can communicate telepathically?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you ever feel that you have no interest in being with other people?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you ever feel as if electrical devices suc has computers can influence the way you think?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you ever feel that yo uare lacking in motivation to do things?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you ever cry about nothing?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you believe in the power of witchcraft, voodoo or the occult?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you believe that people have been abducted by aliens, or that this may have happened to you?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you ever feel that you are lacking in energy?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you ever feel that poeple look at you oddly because of your appearance?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you ever feel that your mind is empty?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you ever feel as if the thoughts in your head are being taken away from you?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you ever feel that you are spending all your days doing nothing?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you ever feel as if the thoughts in your head are not your own?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you ever feel that your feelings are lacking in intensity?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Have your thoughts ever been so vivid that you were worried other people would hear them?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you ever feel that you are lacking in spontaneity?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you ever hear your own thoughts being echoed back to you?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you ever feel that you are a famous historical personality?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you ever feel as if you are under the control of some force or power other than yourself?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you ever feel that your emotions are blunted?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you ever hear voices when you are alone?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you ever hear voices talking to each other when you are alone?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you ever feel that you are neglecting your appearance or personal hygiene?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you ever feel that you can never get things done?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you ever feel that you have only few hobbies or interests?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you ever feel guilty?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you ever feel like a failure?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you ever feel tense?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Have you ever experienced a mental breakdown where you became another person?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you ever feel as if a double has taken the place of a family member, friend or acquaintance?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Do you ever see objects, people or animals that other people cannot see?', 'answer_option': u'1; 2; 3; 4'}]" valType="str"/>
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+    </LoopInitiator>
+    <Routine name="CAPE_P"/>
+    <LoopTerminator name="CAPE_p"/>
+    <Routine name="takk"/>
+  </Flow>
+</PsychoPy2experiment>

@@ -1,0 +1,1775 @@
+<?xml version="1.0" ?>
+<PsychoPy2experiment encoding="utf-8" version="1.90.2">
+  <Settings>
+    <Param name="Monitor" updates="None" val="testMonitor" valType="str"/>
+    <Param name="color" updates="None" val="$[-1,-1,-1]" valType="str"/>
+    <Param name="colorSpace" updates="None" val="rgb" valType="str"/>
+    <Param name="Experiment info" updates="None" val="{u'session': u'001', u'participant': u''}" valType="code"/>
+    <Param name="JS libs" updates="None" val="packaged" valType="str"/>
+    <Param name="Units" updates="None" val="use prefs" valType="str"/>
+    <Param name="Save excel file" updates="None" val="True" valType="bool"/>
+    <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
+    <Param name="Save psydat file" updates="None" val="True" valType="bool"/>
+    <Param name="Window size (pixels)" updates="None" val="[1920, 1080]" valType="code"/>
+    <Param name="Full-screen window" updates="None" val="True" valType="bool"/>
+    <Param name="blendMode" updates="None" val="avg" valType="str"/>
+    <Param name="Use version" updates="None" val="" valType="str"/>
+    <Param name="HTML path" updates="None" val="html" valType="str"/>
+    <Param name="Save csv file" updates="None" val="True" valType="bool"/>
+    <Param name="OSF Project ID" updates="None" val="" valType="str"/>
+    <Param name="Save log file" updates="None" val="True" valType="bool"/>
+    <Param name="Save wide csv file" updates="None" val="True" valType="bool"/>
+    <Param name="Show mouse" updates="None" val="False" valType="bool"/>
+    <Param name="Data filename" updates="None" val="u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])" valType="code"/>
+    <Param name="Show info dlg" updates="None" val="True" valType="bool"/>
+    <Param name="expName" updates="None" val="irregbox_task_norm" valType="str"/>
+    <Param name="logging level" updates="None" val="exp" valType="code"/>
+    <Param name="Screen" updates="None" val="1" valType="num"/>
+  </Settings>
+  <Routines>
+    <Routine name="end_of_task">
+      <TextComponent name="end_message">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="None" val="end_message" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="text" updates="constant" val="End of task&amp;#10;Thank You!" valType="str"/>
+        <Param name="stopVal" updates="constant" val="1.0" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="trial">
+      <TextComponent name="list_options">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="None" val="list_options" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="text" updates="constant" val="Press blue for 85% blue&amp;#10;Press yellow for 85% yellow&amp;#10;" valType="str"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0.8)" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+      </TextComponent>
+      <PolygonComponent name="box_1">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(0,0)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_1" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_2">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(0.2,0 )" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_2" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_3">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(0.45,0.1)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_3" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_4">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(0.8,0.7)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_4" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_5">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(-0.6,0.5)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_5" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_6">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(0.2,0.55)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_6" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_7">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(-0.25,0.45)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_7" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_8">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(0,-0.35)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_8" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_9">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(0.25,-0.3)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_9" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_10">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(-0.3,-0.75)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_10" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_11">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(0.6,-0.6)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_11" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_12">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(-0.2,-0.6)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_12" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_13">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(-0.35,-0.3)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_13" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_14">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(-0.6,-0.5)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_14" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_15">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(-0.4,-0.1)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_15" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <TextComponent name="text">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="None" val="text" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="text" updates="constant" val="Click on a bead to uncover it&amp;#10;Ratio: 85:15" valType="str"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -0.8)" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+      </TextComponent>
+      <MouseComponent name="mouse">
+        <Param name="name" updates="None" val="mouse" valType="code"/>
+        <Param name="timeRelativeTo" updates="constant" val="routine" valType="str"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutineOnPress" updates="constant" val="never" valType="str"/>
+        <Param name="newClicksOnly" updates="constant" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="clickable" updates="constant" val="" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="saveParamsClickable" updates="constant" val="name," valType="code"/>
+        <Param name="saveMouseState" updates="None" val="every frame" valType="str"/>
+      </MouseComponent>
+      <CodeComponent name="code">
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="name" updates="None" val="code" valType="code"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="if mouse.isPressedIn(box_1):&amp;#10;    box_1.fillColor = [-1,-1,1]&amp;#10;    box_1.lineColor = [-1,-1,1]&amp;#10;elif mouse.isPressedIn(box_2):&amp;#10;    box_2.fillColor = [-1,-1,1]&amp;#10;    box_2.lineColor = [-1,-1,1]&amp;#10;elif mouse.isPressedIn(box_3):&amp;#10;    box_3.fillColor = [-1,-1,1]&amp;#10;    box_3.lineColor = [-1,-1,1]&amp;#10;elif mouse.isPressedIn(box_4):&amp;#10;    box_4.fillColor = [1,1,-1]&amp;#10;    box_4.lineColor = [1,1,-1]&amp;#10;elif mouse.isPressedIn(box_5):&amp;#10;    box_5.fillColor = [-1,-1,1]&amp;#10;    box_5.lineColor = [-1,-1,1]&amp;#10;elif mouse.isPressedIn(box_6):&amp;#10;    box_6.fillColor = [-1,-1,1]&amp;#10;    box_6.lineColor = [-1,-1,1]&amp;#10;elif mouse.isPressedIn(box_7):&amp;#10;    box_7.fillColor = [-1,-1,1]&amp;#10;    box_7.lineColor = [-1,-1,1]&amp;#10;elif mouse.isPressedIn(box_8):&amp;#10;    box_8.fillColor = [-1,-1,1]&amp;#10;    box_8.lineColor = [-1,-1,1]&amp;#10;elif mouse.isPressedIn(box_9):&amp;#10;    box_9.fillColor = [-1,-1,1]&amp;#10;    box_9.lineColor = [-1,-1,1]&amp;#10;elif mouse.isPressedIn(box_10):&amp;#10;    box_10.fillColor = [-1,-1,1]&amp;#10;    box_10.lineColor = [-1,-1,1]&amp;#10;elif mouse.isPressedIn(box_11):&amp;#10;    box_11.fillColor = [1,1,-1]&amp;#10;    box_11.lineColor = [1,1,-1]&amp;#10;elif mouse.isPressedIn(box_12):&amp;#10;    box_12.fillColor = [-1,-1,1]&amp;#10;    box_12.lineColor = [-1,-1,1]&amp;#10;elif mouse.isPressedIn(box_13):&amp;#10;    box_13.fillColor = [-1,-1,1]&amp;#10;    box_13.lineColor = [-1,-1,1]&amp;#10;elif mouse.isPressedIn(box_14):&amp;#10;    box_14.fillColor = [-1,-1,1]&amp;#10;    box_14.lineColor = [-1,-1,1]&amp;#10;elif mouse.isPressedIn(box_15):&amp;#10;    box_15.fillColor = [1,1,-1]&amp;#10;    box_15.lineColor = [1,1,-1]" valType="extendedCode"/>
+      </CodeComponent>
+      <CodeComponent name="code_2">
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="name" updates="None" val="code_2" valType="code"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="if event.getKeys(keyList=['j', 'k']):&amp;#10;   continueRoutine = False" valType="extendedCode"/>
+      </CodeComponent>
+      <KeyboardComponent name="key_resp_2">
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_2" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="allowedKeys" updates="constant" val="'j','k'" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="trial_2irreg">
+      <TextComponent name="list_options_5">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="None" val="list_options_5" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="text" updates="constant" val="Press blue for 85% blue&amp;#10;Press yellow for 85% yellow&amp;#10;" valType="str"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0.8)" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+      </TextComponent>
+      <PolygonComponent name="box_60">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(0,0)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_60" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_61">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(0.2,0 )" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_61" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_62">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(0.45,0.1)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_62" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_63">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(0.8,0.7)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_63" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_64">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(-0.6,0.5)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_64" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_65">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(0.2,0.55)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_65" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_66">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(-0.25,0.45)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_66" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_67">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(0,-0.35)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_67" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_68">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(0.25,-0.3)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_68" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_69">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(-0.3,-0.75)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_69" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_70">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(0.6,-0.6)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_70" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_71">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(-0.2,-0.6)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_71" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_72">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(-0.35,-0.3)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_72" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_73">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(-0.6,-0.5)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_73" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_74">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(-0.4,-0.1)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_74" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <TextComponent name="text_6">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="None" val="text_6" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="text" updates="constant" val="Click on a bead to uncover it&amp;#10;Ratio: 85:15" valType="str"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -0.8)" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+      </TextComponent>
+      <MouseComponent name="mouse_5">
+        <Param name="name" updates="None" val="mouse_5" valType="code"/>
+        <Param name="timeRelativeTo" updates="constant" val="routine" valType="str"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutineOnPress" updates="constant" val="never" valType="str"/>
+        <Param name="newClicksOnly" updates="constant" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="clickable" updates="constant" val="" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="saveParamsClickable" updates="constant" val="name," valType="code"/>
+        <Param name="saveMouseState" updates="None" val="every frame" valType="str"/>
+      </MouseComponent>
+      <CodeComponent name="code_9">
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="name" updates="None" val="code_9" valType="code"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="if mouse.isPressedIn(box_60):&amp;#10;    box_60.fillColor = [1,1,-1]&amp;#10;    box_60.lineColor = [1,1,-1]&amp;#10;elif mouse.isPressedIn(box_61):&amp;#10;    box_61.fillColor = [1,1,-1]&amp;#10;    box_61.lineColor = [1,1,-1]&amp;#10;elif mouse.isPressedIn(box_62):&amp;#10;    box_62.fillColor = [1,1,-1]&amp;#10;    box_62.lineColor = [1,1,-1]&amp;#10;elif mouse.isPressedIn(box_63):&amp;#10;    box_63.fillColor = [1,1,-1]&amp;#10;    box_63.lineColor = [1,1,-1]&amp;#10;elif mouse.isPressedIn(box_64):&amp;#10;    box_64.fillColor = [1,1,-1]&amp;#10;    box_64.lineColor = [1,1,-1]&amp;#10;elif mouse.isPressedIn(box_65):&amp;#10;    box_65.fillColor = [-1,-1,1]&amp;#10;    box_65.lineColor = [-1,-1,1]&amp;#10;elif mouse.isPressedIn(box_66):&amp;#10;    box_66.fillColor = [1,1,-1]&amp;#10;    box_66.lineColor = [1,1,-1]&amp;#10;elif mouse.isPressedIn(box_67):&amp;#10;    box_67.fillColor = [1,1,-1]&amp;#10;    box_67.lineColor = [1,1,-1]&amp;#10;elif mouse.isPressedIn(box_68):&amp;#10;    box_68.fillColor = [1,1,-1]&amp;#10;    box_68.lineColor = [1,1,-1]&amp;#10;elif mouse.isPressedIn(box_69):&amp;#10;    box_69.fillColor = [-1,-1,1]&amp;#10;    box_69.lineColor = [-1,-1,1]&amp;#10;elif mouse.isPressedIn(box_70):&amp;#10;    box_70.fillColor = [1,1,-1]&amp;#10;    box_70.lineColor = [1,1,-1]&amp;#10;elif mouse.isPressedIn(box_71):&amp;#10;    box_71.fillColor = [1,1,-1]&amp;#10;    box_71.lineColor = [1,1,-1]&amp;#10;elif mouse.isPressedIn(box_72):&amp;#10;    box_72.fillColor = [-1,-1,1]&amp;#10;    box_72.lineColor = [-1,-1,1]&amp;#10;elif mouse.isPressedIn(box_73):&amp;#10;    box_73.fillColor = [1,1,-1]&amp;#10;    box_73.lineColor = [1,1,-1]&amp;#10;elif mouse.isPressedIn(box_74):&amp;#10;    box_74.fillColor = [1,1,-1]&amp;#10;    box_74.lineColor = [1,1,-1]" valType="extendedCode"/>
+      </CodeComponent>
+      <CodeComponent name="code_10">
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="name" updates="None" val="code_10" valType="code"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="if event.getKeys(keyList=['j', 'k']):&amp;#10;   continueRoutine = False" valType="extendedCode"/>
+      </CodeComponent>
+      <KeyboardComponent name="key_resp_7">
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_7" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="allowedKeys" updates="constant" val="'j','k'" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="trial_4irreg">
+      <TextComponent name="list_options_7">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="None" val="list_options_7" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="text" updates="constant" val="Press blue for 60% blue&amp;#10;Press yellow for 60% yellow&amp;#10;" valType="str"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0.8)" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+      </TextComponent>
+      <PolygonComponent name="box_90">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(0,0)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_90" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_91">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(0.2,0 )" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_91" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_92">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(0.45,0.1)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_92" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_93">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(0.8,0.7)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_93" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_94">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(-0.6,0.5)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_94" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_95">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(0.2,0.55)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_95" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_96">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(-0.25,0.45)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_96" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_97">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(0,-0.35)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_97" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_98">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(0.25,-0.3)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_98" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_99">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(-0.3,-0.75)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_99" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_100">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(0.6,-0.6)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_100" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_101">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(-0.2,-0.6)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_101" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_102">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(-0.35,-0.3)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_102" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_103">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(-0.6,-0.5)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_103" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_104">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(-0.4,-0.1)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_104" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <TextComponent name="text_8">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="None" val="text_8" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="text" updates="constant" val="Click on a bead to uncover it&amp;#10;Ratio: 60:40" valType="str"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -0.8)" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+      </TextComponent>
+      <MouseComponent name="mouse_7">
+        <Param name="name" updates="None" val="mouse_7" valType="code"/>
+        <Param name="timeRelativeTo" updates="constant" val="routine" valType="str"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutineOnPress" updates="constant" val="never" valType="str"/>
+        <Param name="newClicksOnly" updates="constant" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="clickable" updates="constant" val="" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="saveParamsClickable" updates="constant" val="name," valType="code"/>
+        <Param name="saveMouseState" updates="None" val="every frame" valType="str"/>
+      </MouseComponent>
+      <CodeComponent name="code_13">
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="name" updates="None" val="code_13" valType="code"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="if mouse.isPressedIn(box_90):&amp;#10;    box_90.fillColor = [1,1,-1]&amp;#10;    box_90.lineColor = [1,1,-1]&amp;#10;elif mouse.isPressedIn(box_91):&amp;#10;    box_91.fillColor = [-1,-1,1]&amp;#10;    box_91.lineColor = [-1,-1,1]&amp;#10;elif mouse.isPressedIn(box_92):&amp;#10;    box_92.fillColor = [-1,-1,1]&amp;#10;    box_92.lineColor = [-1,-1,1]&amp;#10;elif mouse.isPressedIn(box_93):&amp;#10;    box_93.fillColor = [1,1,-1]&amp;#10;    box_93.lineColor = [1,1,-1]&amp;#10;elif mouse.isPressedIn(box_94):&amp;#10;    box_94.fillColor = [-1,-1,1]&amp;#10;    box_94.lineColor = [-1,-1,1]&amp;#10;elif mouse.isPressedIn(box_95):&amp;#10;    box_95.fillColor = [-1,-1,1]&amp;#10;    box_95.lineColor = [-1,-1,1]&amp;#10;elif mouse.isPressedIn(box_96):&amp;#10;    box_96.fillColor = [1,1,-1]&amp;#10;    box_96.lineColor = [1,1,-1]&amp;#10;elif mouse.isPressedIn(box_97):&amp;#10;    box_97.fillColor = [-1,-1,1]&amp;#10;    box_97.lineColor = [-1,-1,1]&amp;#10;elif mouse.isPressedIn(box_98):&amp;#10;    box_98.fillColor = [-1,-1,1]&amp;#10;    box_98.lineColor = [-1,-1,1]&amp;#10;elif mouse.isPressedIn(box_99):&amp;#10;    box_99.fillColor = [-1,-1,1]&amp;#10;    box_99.lineColor = [-1,-1,1]&amp;#10;elif mouse.isPressedIn(box_100):&amp;#10;    box_100.fillColor = [1,1,-1]&amp;#10;    box_100.lineColor = [1,1,-1]&amp;#10;elif mouse.isPressedIn(box_101):&amp;#10;    box_101.fillColor = [-1,-1,1]&amp;#10;    box_101.lineColor = [-1,-1,1]&amp;#10;elif mouse.isPressedIn(box_102):&amp;#10;    box_102.fillColor = [-1,-1,1]&amp;#10;    box_102.lineColor = [-1,-1,1]&amp;#10;elif mouse.isPressedIn(box_103):&amp;#10;    box_103.fillColor = [-1,-1,1]&amp;#10;    box_103.lineColor = [-1,-1,1]&amp;#10;elif mouse.isPressedIn(box_104):&amp;#10;    box_104.fillColor = [1,1,-1]&amp;#10;    box_104.lineColor = [1,1,-1]" valType="extendedCode"/>
+      </CodeComponent>
+      <CodeComponent name="code_14">
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="name" updates="None" val="code_14" valType="code"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="if event.getKeys(keyList=['j', 'k']):&amp;#10;   continueRoutine = False" valType="extendedCode"/>
+      </CodeComponent>
+      <KeyboardComponent name="key_resp_9">
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_9" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="allowedKeys" updates="constant" val="'j','k'" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="trial_3irreg">
+      <TextComponent name="list_options_6">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="None" val="list_options_6" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="text" updates="constant" val="Press blue for 60% blue&amp;#10;Press yellow for 60% yellow&amp;#10;" valType="str"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0.8)" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+      </TextComponent>
+      <PolygonComponent name="box_75">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(0,0)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_75" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_76">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(0.2,0 )" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_76" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_77">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(0.45,0.1)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_77" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_78">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(0.8,0.7)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_78" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_79">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(-0.6,0.5)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_79" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_80">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(0.2,0.55)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_80" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_81">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(-0.25,0.45)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_81" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_82">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(0,-0.35)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_82" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_83">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(0.25,-0.3)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_83" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_84">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(-0.3,-0.75)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_84" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_85">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(0.6,-0.6)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_85" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_86">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(-0.2,-0.6)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_86" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_87">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(-0.35,-0.3)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_87" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_88">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(-0.6,-0.5)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_88" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <PolygonComponent name="box_89">
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="pos" updates="constant" val="(-0.4,-0.1)" valType="code"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="size" updates="constant" val="(0.113,0.2)" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="box_89" valType="code"/>
+        <Param name="lineColor" updates="constant" val="$[0.506,0.506,0.506]" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+      </PolygonComponent>
+      <TextComponent name="text_7">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="None" val="text_7" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="text" updates="constant" val="Click on a bead to uncover it&amp;#10;Ratio: 60:40" valType="str"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -0.8)" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+      </TextComponent>
+      <MouseComponent name="mouse_6">
+        <Param name="name" updates="None" val="mouse_6" valType="code"/>
+        <Param name="timeRelativeTo" updates="constant" val="routine" valType="str"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutineOnPress" updates="constant" val="never" valType="str"/>
+        <Param name="newClicksOnly" updates="constant" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="clickable" updates="constant" val="" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="saveParamsClickable" updates="constant" val="name," valType="code"/>
+        <Param name="saveMouseState" updates="None" val="every frame" valType="str"/>
+      </MouseComponent>
+      <CodeComponent name="code_11">
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="name" updates="None" val="code_11" valType="code"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="if mouse.isPressedIn(box_75):&amp;#10;    box_75.fillColor = [1,1,-1]&amp;#10;    box_75.lineColor = [1,1,-1]&amp;#10;elif mouse.isPressedIn(box_76):&amp;#10;    box_76.fillColor = [-1,-1,1]&amp;#10;    box_76.lineColor = [-1,-1,1]&amp;#10;elif mouse.isPressedIn(box_77):&amp;#10;    box_77.fillColor = [1,1,-1]&amp;#10;    box_77.lineColor = [1,1,-1]&amp;#10;elif mouse.isPressedIn(box_78):&amp;#10;    box_78.fillColor = [1,1,-1]&amp;#10;    box_78.lineColor = [1,1,-1]&amp;#10;elif mouse.isPressedIn(box_79):&amp;#10;    box_79.fillColor = [-1,-1,1]&amp;#10;    box_79.lineColor = [-1,-1,1]&amp;#10;elif mouse.isPressedIn(box_80):&amp;#10;    box_80.fillColor = [1,1,-1]&amp;#10;    box_80.lineColor = [1,1,-1]&amp;#10;elif mouse.isPressedIn(box_81):&amp;#10;    box_81.fillColor = [-1,-1,1]&amp;#10;    box_81.lineColor = [-1,-1,1]&amp;#10;elif mouse.isPressedIn(box_82):&amp;#10;    box_82.fillColor = [1,1,-1]&amp;#10;    box_82.lineColor = [1,1,-1]&amp;#10;elif mouse.isPressedIn(box_83):&amp;#10;    box_83.fillColor = [-1,-1,1]&amp;#10;    box_83.lineColor = [-1,-1,1]&amp;#10;elif mouse.isPressedIn(box_84):&amp;#10;    box_84.fillColor = [1,1,-1]&amp;#10;    box_84.lineColor = [1,1,-1]&amp;#10;elif mouse.isPressedIn(box_85):&amp;#10;    box_85.fillColor = [1,1,-1]&amp;#10;    box_85.lineColor = [1,1,-1]&amp;#10;elif mouse.isPressedIn(box_86):&amp;#10;    box_86.fillColor = [-1,-1,1]&amp;#10;    box_86.lineColor = [-1,-1,1]&amp;#10;elif mouse.isPressedIn(box_87):&amp;#10;    box_87.fillColor = [-1,-1,1]&amp;#10;    box_87.lineColor = [-1,-1,1]&amp;#10;elif mouse.isPressedIn(box_88):&amp;#10;    box_88.fillColor = [1,1,-1]&amp;#10;    box_88.lineColor = [1,1,-1]&amp;#10;elif mouse.isPressedIn(box_89):&amp;#10;    box_89.fillColor = [1,1,-1]&amp;#10;    box_89.lineColor = [1,1,-1]" valType="extendedCode"/>
+      </CodeComponent>
+      <CodeComponent name="code_12">
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="name" updates="None" val="code_12" valType="code"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="if event.getKeys(keyList=['j', 'k']):&amp;#10;   continueRoutine = False" valType="extendedCode"/>
+      </CodeComponent>
+      <KeyboardComponent name="key_resp_8">
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_8" valType="code"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="allowedKeys" updates="constant" val="'j','k'" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="Instructions">
+      <TextComponent name="text_5">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="None" val="text_5" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="text" updates="constant" val="At the start of each trial, you will see a number of grey beads.&amp;#10;These beads each hide a colour, which can be uncovered by left-clicking on the bead.&amp;#10;You will also be given a ratio. This tells you the distribution of colours overall.&amp;#10;&amp;#10;For instance, if the ratio is 60:40, 60 % of the beads may be blue, the rest yellow or vice versa.&amp;#10;Your task is to figure out the majority colour.&amp;#10;&amp;#10;Once you feel you have enough information, you can make a decision by pressing the yellow key for yellow or the blue key for blue.&amp;#10;Feel free to uncover as many beads as you feel you need to make a decision.&amp;#10;&amp;#10;Remember to check the information on screen as colour ratios will change throughout the trial.&amp;#10;&amp;#10;Press SPACE to get started.&amp;#10;&amp;#10;Good luck!" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="key_resp_6">
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_6" valType="code"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+  </Routines>
+  <Flow>
+    <Routine name="Instructions"/>
+    <Routine name="trial"/>
+    <Routine name="trial_2irreg"/>
+    <Routine name="trial_3irreg"/>
+    <Routine name="trial_4irreg"/>
+    <Routine name="end_of_task"/>
+  </Flow>
+</PsychoPy2experiment>

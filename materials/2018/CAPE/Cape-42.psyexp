@@ -1,0 +1,158 @@
+<?xml version="1.0" ?>
+<PsychoPy2experiment encoding="utf-8" version="1.90.2">
+  <Settings>
+    <Param name="Monitor" updates="None" val="testMonitor" valType="str"/>
+    <Param name="color" updates="None" val="$[-1,-1,-1]" valType="str"/>
+    <Param name="colorSpace" updates="None" val="rgb" valType="str"/>
+    <Param name="Experiment info" updates="None" val="{u'participant': u'', u'sex': u''}" valType="code"/>
+    <Param name="JS libs" updates="None" val="packaged" valType="str"/>
+    <Param name="Units" updates="None" val="use prefs" valType="str"/>
+    <Param name="Save excel file" updates="None" val="True" valType="bool"/>
+    <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
+    <Param name="Save psydat file" updates="None" val="True" valType="bool"/>
+    <Param name="Window size (pixels)" updates="None" val="[1920, 1080]" valType="code"/>
+    <Param name="Full-screen window" updates="None" val="True" valType="bool"/>
+    <Param name="blendMode" updates="None" val="avg" valType="str"/>
+    <Param name="Use version" updates="None" val="" valType="str"/>
+    <Param name="HTML path" updates="None" val="html" valType="str"/>
+    <Param name="Save csv file" updates="None" val="True" valType="bool"/>
+    <Param name="OSF Project ID" updates="None" val="" valType="str"/>
+    <Param name="Save log file" updates="None" val="False" valType="bool"/>
+    <Param name="Save wide csv file" updates="None" val="True" valType="bool"/>
+    <Param name="Show mouse" updates="None" val="False" valType="bool"/>
+    <Param name="Data filename" updates="None" val="u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])" valType="code"/>
+    <Param name="Show info dlg" updates="None" val="True" valType="bool"/>
+    <Param name="expName" updates="None" val="Cape-42" valType="str"/>
+    <Param name="logging level" updates="None" val="data" valType="code"/>
+    <Param name="Screen" updates="None" val="1" valType="num"/>
+  </Settings>
+  <Routines>
+    <Routine name="instrucs_CAPE">
+      <TextComponent name="instrucsCAPE">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="None" val="instrucsCAPE" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="text" updates="constant" val="Dette spørreskjemaet skapt for å måle særskilte følelser, forestillinger, og mentale opplevelser. Vi tror at disse er mye vanligere enn det som var tidligere antatt, og at de fleste mennesker har hatt slike opplevelser i løpet av sitt liv. &amp;#10;Det er ingen svar som er rette eller gale. Det er dine oppriktige synspunkter og meninger vi er interesserte i. Tenk ikke for lenge på hvert spørsmål - &amp;#10;er du i tvil, er ofte den første tanken det beste svaret. &amp;#10;Svaralternativene er:  &amp;#10;Aldri (1), &amp;#10;Iblant (2), &amp;#10;Ofte (3), &amp;#10;Nesten alltid (4).&amp;#10;Trykk SPACE når du er klar for å begynne." valType="str"/>
+        <Param name="stopVal" updates="constant" val="15.0" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="key_resp_2">
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_2" valType="code"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="takk">
+      <TextComponent name="takking">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="None" val="takking" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="text" updates="constant" val="Da er du ferdig&amp;#10;Takk for deltakelse" valType="str"/>
+        <Param name="stopVal" updates="constant" val="3.0" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="CAPE_P">
+      <TextComponent name="CAPE42">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="None" val="CAPE42" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="text" updates="set every repeat" val="$Survey_items" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.04" valType="code"/>
+      </TextComponent>
+      <RatingScaleComponent name="rating_2">
+        <Param name="labels" updates="constant" val="" valType="str"/>
+        <Param name="pos" updates="constant" val="0, -0.4" valType="str"/>
+        <Param name="high" updates="constant" val="4" valType="code"/>
+        <Param name="storeRating" updates="constant" val="True" valType="bool"/>
+        <Param name="marker" updates="constant" val="triangle" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="markerStart" updates="constant" val="3" valType="str"/>
+        <Param name="disappear" updates="constant" val="False" valType="bool"/>
+        <Param name="size" updates="constant" val="0.5" valType="code"/>
+        <Param name="tickHeight" updates="constant" val="" valType="str"/>
+        <Param name="showAccept" updates="constant" val="True" valType="bool"/>
+        <Param name="storeRatingTime" updates="constant" val="True" valType="bool"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="low" updates="constant" val="1" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="visualAnalogScale" updates="constant" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="stopType" updates="None" val="condition" valType="str"/>
+        <Param name="scaleDescription" updates="constant" val="&quot;Aldri&quot; &quot;ibland&quot; &quot;ofte&quot; &quot;nesten alltid&quot;" valType="str"/>
+        <Param name="storeHistory" updates="constant" val="False" valType="bool"/>
+        <Param name="categoryChoices" updates="constant" val="" valType="str"/>
+        <Param name="customize_everything" updates="constant" val="marker='triangle', size=0.5, pos=[0.0, -0.4], low=1, high=4, labels=['aldri','iblant','ofte','nesten alltid'], scale = '1 = Aldri, 2 = Iblant, 3 = Ofte, 4 = Nesten alltid', markerStart='3',stretch = 2.5" valType="str"/>
+        <Param name="name" updates="None" val="rating_2" valType="code"/>
+        <Param name="singleClick" updates="constant" val="False" valType="bool"/>
+      </RatingScaleComponent>
+    </Routine>
+  </Routines>
+  <Flow>
+    <Routine name="instrucs_CAPE"/>
+    <LoopInitiator loopType="TrialHandler" name="CAPE_p">
+      <Param name="conditionsFile" updates="None" val="CAPE42.xlsx" valType="str"/>
+      <Param name="name" updates="None" val="CAPE_p" valType="code"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+      <Param name="loopType" updates="None" val="sequential" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="code"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="conditions" updates="None" val="[{'Survey_items': u'F\xf8ler du deg noen gang trist?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Har du noen gang f\xf8lelsen av at folk kommer med hint om deg, eller sier ting med dobbel betydning?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Har du noen gang f\xf8lelsen av at du ikke er en spesielt livlig person?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Har du noen gang f\xf8lelsen av at du ikke er s\xe6rlig god til \xe5 snakke for deg n\xe5r du er i en samtale med andre mennesker?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Har du noen gang f\xf8lelsen av at noe i et blad eller p\xe5 TV er beregnet spesielt p\xe5 deg?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Har du noen gang f\xf8lelsen av at enkelte personer er noe annet enn de gir seg ut for?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'F\xf8ler du deg noen gang forfulgt p\xe5 en eller annen m\xe5te?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Har du noen gang hatt f\xf8lelsen av at du har svake eller ingen f\xf8lelsesmessige reaksjoner n\xe5r noe...', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'F\xf8ler du deg noen gang pessimistisk n\xe5r det gjelder absolutt alt?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Har du noen gang f\xf8lelsen av at en konspirasjon er rettet mot deg?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Hender det at du ser bittesm\xe5 gjenstander eller fenomener, for eksempel hvite mus?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Har du noen gang f\xf8lelsen av at du er forutbestemt til \xe5 v\xe6re en veldig viktig person?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Har du noen gang f\xf8lelsen av at du ikke har noen framtid?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Har du noen gang f\xf8lelsen av at du er en veldig spesiell eller uvanlig person?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Hender det at du f\xf8ler det som om du ikke har lyst til \xe5 lever lenger?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Hender det at du tror folk kan kommunisere telepatisk?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'F\xf8ler du noen gang at du ikke har noen interesse av \xe5 v\xe6re sammen med andre?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Har du noen gang f\xf8lelsen av at elektriske apparater, for eksempel datamaskiner, kan p\xe5virke tank...', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Har du noen gang f\xf8lelsen av at du mangler motivasjon for \xe5 gj\xf8re ting?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Hender det at du gr\xe5ter helt uten grunn?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Tror du p\xe5 hekseri, voodoo eller overnaturlige ting?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Tror du p\xe5 at folk har blitt bortf\xf8rt av romvesener, eller at dette kan ha hendt deg?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Har du noen gang f\xf8lelsen av at du mangler energi?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Har du noen gang f\xf8lelsen av at folk ser rart p\xe5 deg p\xe5 grunn av utseendet ditt?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Har du noen gang f\xf8lelsen av at hodet ditt er helt tomt for tanker?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Har du noen gang f\xf8lelsen av at tankene dine blir tatt fra deg?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Har du noen gang f\xf8lelsen av at du bruker alle dagene dine til ikke \xe5 gj\xf8re noen ting?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'F\xf8ler du noen gang at tankene i hodet ditt ikke er dine egne?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'F\xf8ler du noen gang at f\xf8lelsene dine mangler intensitet? ', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Har tankene dine noen gang v\xe6rt s\xe5 livaktige at du var redd andre skulle h\xf8re dem?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'F\xf8ler du noen gang at du mangler spontanitet?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'H\xf8rer du noen gang dine egne tanker, som et ekko?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Har du noen gang f\xf8lelsen av at du er en ber\xf8mt, historisk personlighet?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Har du noen gang f\xf8lelsen av \xe5 v\xe6re under kontroll av en kraft eller makt utenom deg selv?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Kjennes det noen gang som f\xf8lelsene dine er avstumpede?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Hender det at du h\xf8rer stemmer n\xe5r du er alene?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Hender det at du h\xf8rer stemmer som snakker sammen n\xe5r du er alene?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Har du noen gang f\xf8lelsen av at du neglisjerer utseendet ditt, eller din personlige hygiene?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Har du noen gang f\xf8lelsen av at du aldri f\xe5r ting gjort?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Har du noen gang f\xf8lelsen av at du bare har f\xe5 hobbyer eller interesser?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Hender det at du f\xf8ler deg skyldig?\xa0', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Hender det at du f\xf8ler deg mislykket?\xa0', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Hender det at du f\xf8ler deg anspent?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Har du noensinne opplevd et mental kollaps, der du blir en annen person?', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Har du noen gang f\xf8lelsen av at et familiemedlem, en venn, eller en bekjent har blitt erstattet a...', 'answer_option': u'1; 2; 3; 4'}, {'Survey_items': u'Hender det at du ser gjenstander, folk eller dyr som andre ikke kan se?', 'answer_option': u'1; 2; 3; 4'}]" valType="str"/>
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+    </LoopInitiator>
+    <Routine name="CAPE_P"/>
+    <LoopTerminator name="CAPE_p"/>
+    <Routine name="takk"/>
+  </Flow>
+</PsychoPy2experiment>
