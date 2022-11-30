@@ -1,6 +1,6 @@
-# Probabilistic reasoning & information sampling
+# Information sampling
 
-### R-scripts for data extraction, cleaning and analysis.
+### R-scripts for data extraction, cleaning, and analysis.
 
 #### Raw and clean data only uploaded to OSF (due to GDPR). Link:
 
@@ -49,21 +49,8 @@
 - Article/: All files relating to the final article.
 
 #### To-do:
-- Exclusion according to prereg criteria, and flagging.
 - Add analysis scripts to GitHub.
 - Add link to OSF and vice versa.
-- Clean up project for easier overview for reviewers and interested readers.
-- Clean up, and add cleaned data to OSF.
-- Add Debrief "analyses" to OSF.
 
 #### _Could_ be improved / collected:
-- Extract decisions for all Beads and Box tasks.
-
-#### Other (random) notes:
-- Variance in ambig and risk attitude estimations.
-- Quantify degree of correct probability estimation during Box-task.
-- Wrong choice after plenty of draws - Flagging (Beads and Box tasks).
-- Extreme probability without decision (Box2020) - Flagging/taking as choice.
-- Box-limit: Encountered "time-out", effect on next trial(s). Including in practice trial.
-- Different decision-tactics/inference heuristics as models. E.g., streaks.
 - Temprature measurement for beads and box.
