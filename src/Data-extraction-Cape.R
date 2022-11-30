@@ -3,6 +3,8 @@
 Path <- CapePath[grepl("CAPE_p.csv", CapePath)]
 Cape2018 <- row.names(c("ID", "Score"))
 Cape2018 <- as.data.frame(Cape2018)
+All <- NULL
+All <- as.data.frame(All)
 
 for (i in Path) {
 score <- read.csv(i)
@@ -11,10 +13,14 @@ capp <- c(2,5,6,7,10,12,14,16,18,21,24,26,28,30,32,34,36,37,45,46)
 control <- c(22,33,44)
 capp <- score[capp,]
 control <- score[control,]
+indresp <- as.numeric(capp[,4])
 capp <- as.numeric(colSums(capp[4]))
 control <- as.numeric(colSums(control[4]))
-Cape2018 <- rbind(Cape2018,cbind(id, capp, control))
+Cape2018 <- rbind(Cape2018,c(id, capp, control, indresp))
+All <- rbind(All,indresp)
 }
+Cape2018Ind <- All
+Cape2018Omega <- psych::omega(All, nfactors = 1)
 
 Cape2020 <- read.csv(paste(getwd(), "/Intermidiate data/music_data.csv", sep = ""))
 control <- c(5,12,22)
@@ -23,10 +29,13 @@ control <- control + 13
 capp <- capp + 13
 aq <- c(37:64)
 id <- as.character(Cape2020[,2])
+All <- Cape2020[,capp]
 capp <- as.numeric(rowSums(Cape2020[,capp]))
 control <- as.numeric(rowSums(Cape2020[,control]))
 aq <- as.numeric(rowSums(Cape2020[,aq]))
-Cape2020 <- cbind(id, capp, control, aq)
+Cape2020 <- cbind(id, capp, control, aq, All)
+Cape2020Ind <- cbind(Cape2020, All)
+colnames(Cape2018) <- colnames(Cape2020)[-4]
 
 #Manual fix of participant-numbers
 Cape2020 <- Cape2020[-1,]
@@ -64,7 +73,9 @@ Cape[91,1] <- "id06ik27"
 Cape[97,1] <- "IE05LD08"
 row.names(Cape) <- Cape[,1]
 Cape <- Cape[,-1]
-colnames(Cape) <- c("CapeP", "CapeControl", "AQ")
+colnames(Cape)[c(1,2,23)] <- c("CapeP", "CapeControl", "AQ")
+
+test2 <- test
 
 write.csv(Cape, paste(getwd(), "/Cleaned data/CAPE.csv", sep=""))
 
