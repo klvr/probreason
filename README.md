@@ -1,8 +1,8 @@
-# Information sampling
+# Repository for scripts related to article: 'Ambiguity Aversion is Not Related to Delusion Ideation nor Hasty Decision-Making in Two Sequential Information Sampling Tasks'
 
 ### R-scripts for data extraction, cleaning, and analysis.
 
-#### Raw and clean data only uploaded to OSF (due to GDPR). Link:
+#### Raw and clean data only uploaded to OSF (due to GDPR). Link: https://osf.io/z9wye/
 
 #### Download the data, clone this repository, run the "MasterScript-DataExtractionMerging.R"-script, to extract, clean and merge all data, or use the "Loading-files.R"-script and choose task-wise script(s) for the task(s) you want data from. At the current time, this masterscript must be run line by line.
 #### To run the analysis-script, the script above must run first, unless you already have the AllData.csv file, by either running the extraction scripts, or downloaded from OSF.
@@ -17,7 +17,6 @@
     - Data from 2018.
   - BeadsTwojar: Beads drawing task, two jar version (Huq et al.).
     - Data from 2018 and 2020.
-      - (Very) Minor difference in one (first) trial.
 - Box Tasks:
   - BoxIrreg: Box opening task with disorganized placement of the boxes, no limit, two colours, ratio provided. Free sequences.
     - Data from 2018.
