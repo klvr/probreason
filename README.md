@@ -2,7 +2,7 @@
 
 ## Repository for R-scripts related to the article.
 
-Raw and clean data only uploaded to the [OSF-repository](https://osf.io/z9wye/) (due to GDPR).
+Raw and clean data only uploaded to the [OSF-repository](https://osf.io/k8w29/) (due to GDPR).
 
 ### Contains R-scripts for data extraction, cleaning, and analysis.
 
@@ -36,22 +36,27 @@ I.e., from raw data (as outputted by the materials used) to cleaned data, and to
 -   NfCC: Need for (cognitive) closure questionnaire (Roets & Van Hiel, 2011).
     -   Data from 2020
 
-#### Download the data, clone this repository, run the "MasterScript-DataExtractionMerging.R"-script, to extract, clean and merge all data, or use the "Loading-files.R"-script and choose task-wise script(s) for the task(s) you want data from. At the current time, this masterscript must be run line by line.
+## Environment, package-versions of other issues:
 
-#### To run the analysis-script, the script above must run first, unless you already have the AllData.csv file, by either running the extraction scripts, or downloaded from OSF.
+If you have any issues with running any of the scripts, one solution is to use the ['renv'-package](https://rstudio.github.io/renv/articles/renv.html). Install this package on your local machine, and follow the guide in the link. By using the 'renv.lock' file and folder uploaded here you can recreate my local environment (i.e., specific versions of packages).
 
-#### (Local) File-structure:
+## How to use this repository:
 
--   All R-scripts in wd.
--   Raw data/: Folder subfolders with raw-data.
--   Intermidiate data/: Data saved before further use (e.g., ART long-format for hBayesDM, and hBayesDM outputs).
--   Cleaned data/: CSV-files with extracted and cleaned data, both task-wise and collected.
--   Obsolete scripts/: Scripts no longer in use, but might contain useful snippets.
--   Tasks and other files/: The tasks and questionnaires, as well as other non-data related files from OSF.
--   Presentation Jan. 2020/: Brief task-presentation from Jan. 2020.
--   Presentation Aug. 2020/: Brief presentation for PhD pitch, August 2020.
--   Analyses/: Random files saved relating to analyses.
--   Article/: All files relating to the final article.
+This repository contains three main parts, that all can be used in isolation.
+
+Part 1: All task files used to run the experiment(s) as done in the current article.
+See 'materials' in the project structure below.
+
+Part 2 is the pipeline from raw/source data (as outputted by the material) to a collected,
+cleaned and summarised data-set (both within-task, and collected into one data-frame/file).
+Given that you have downloaded the raw data from OSF, and mirrored the structure as seen below,
+you can recreate the collective data file from scratch.
+See 'src' in the project structure below on how to proceed.
+
+Part 3 is the pipeline from cleaned data (summary file), to the presented analyses, tables and plots.
+This part can be ran independently (given that you have downloaded the collective data file from OSF),
+or in conjunction with part 2 to recreate all presented data in the current article.
+See 'src' in the project structure below on how to proceed.
 
 ## Project structure:
 
@@ -175,8 +180,6 @@ I.e., from raw data (as outputted by the materials used) to cleaned data, and to
     |   |
     │   └───temp/ - Temporary files from scripts.
     │       Happens automatically when running scripts. This section will not be updated
-    |   
-    └───data_dummy/ - Identical file-structure and nameing conventions as the real data
     │
     └───materials/ - Task files for adminisering the tasks and self-reports
     |   |        NB: We are not the original creators of these, please refer to the
@@ -221,5 +224,5 @@ I.e., from raw data (as outputted by the materials used) to cleaned data, and to
 #### To-do:
 
 -   Add analysis scripts to GitHub.
--   Add link to OSF and vice versa.
+-   Add link to GitHub at OSF.
 -   Update src/ folder structure
