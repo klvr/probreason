@@ -47,3 +47,6 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+# Output - Files are generated automatically and not uploaded here
+/output/
