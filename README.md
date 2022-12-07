@@ -8,6 +8,8 @@ Raw and clean data only uploaded to the [OSF-repository](https://osf.io/k8w29/) 
 
 I.e., from raw data (as outputted by the materials used) to cleaned data, and to the analyses, tables, and figures as presented both in the main article as well as the supplementary material.
 
+## Tasks and self-reports included.
+
 #### The following behavioural tasks were used:
 
 -   ART: Choice under Risk and Ambiguity Task (Levy et al., 2010).
@@ -36,7 +38,7 @@ I.e., from raw data (as outputted by the materials used) to cleaned data, and to
 -   NfCC: Need for (cognitive) closure questionnaire (Roets & Van Hiel, 2011).
     -   Data from 2020
 
-## Environment, package-versions of other issues:
+## Environment, package-versions or other issues:
 
 If you have any issues with running any of the scripts, one solution is to use the ['renv'-package](https://rstudio.github.io/renv/articles/renv.html). Install this package on your local machine, and follow the guide in the link. By using the 'renv.lock' file and folder uploaded here you can recreate my local environment (i.e., specific versions of packages).
 
@@ -44,19 +46,11 @@ If you have any issues with running any of the scripts, one solution is to use t
 
 This repository contains three main parts, that all can be used in isolation.
 
-Part 1: All task files used to run the experiment(s) as done in the current article.
-See 'materials' in the project structure below.
+Part 1: All task files used to run the experiment(s) as done in the current article. See 'materials' in the project structure below.
 
-Part 2 is the pipeline from raw/source data (as outputted by the material) to a collected,
-cleaned and summarised data-set (both within-task, and collected into one data-frame/file).
-Given that you have downloaded the raw data from OSF, and mirrored the structure as seen below,
-you can recreate the collective data file from scratch.
-See 'src' in the project structure below on how to proceed.
+Part 2 is the pipeline from raw/source data (as outputted by the material) to a collected, cleaned and summarised data-set (both within-task, and collected into one data-frame/file). Given that you have downloaded the raw data from OSF, and mirrored the structure as seen below, you can recreate the collective data file from scratch. See 'src' in the project structure below on how to proceed.
 
-Part 3 is the pipeline from cleaned data (summary file), to the presented analyses, tables and plots.
-This part can be ran independently (given that you have downloaded the collective data file from OSF),
-or in conjunction with part 2 to recreate all presented data in the current article.
-See 'src' in the project structure below on how to proceed.
+Part 3 is the pipeline from cleaned data (summary file), to the presented analyses, tables and plots. This part can be ran independently (given that you have downloaded the collective data file from OSF), or in conjunction with part 2 to recreate all presented data in the current article. See 'src' in the project structure below on how to proceed.
 
 ## Project structure:
 
